@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_main_content' );
 				<div class="product_categories_kategorije mb-10">
 					<h2 class="font-kanit text-2xl font-light uppercase">Kategorije</h2>
 				</div>
-				<div class="font-kanit font-normal text-base text-kategorije">
+				<div class="font-kanit font-normal text-base konfigurator_categories">
 					<?php echo do_shortcode('[product_categories class="product_categories"]'); ?>
 				</div>
 			</div>

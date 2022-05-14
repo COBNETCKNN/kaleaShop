@@ -15,7 +15,7 @@
 <!-- KOMPLETNO OPREMANJE SECTION -->
 <section id="kompletnoOpremanje" class="bg-kompletnoOpremanjeBackground">
     <div class="container mx-auto">
-        <div class="grid grid-cols-2 gap-4 py-36">
+        <div class="grid grid-cols-2 gap-4 pt-24 pb-36">
             <!-- LEFT SIDE -->
             <div class="my-auto">
               <h2 class="slide_right kompletnoOpremanje_heading font-5xl font-lovelace font-normal text-frontPageGray">Kompletno opremanje</h2>

@@ -399,8 +399,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bottom-20{
   bottom: 5rem;
 }
-.right-40{
-  right: 10rem;
+.right-48{
+  right: 12rem;
 }
 .bottom-24{
   bottom: 6rem;
@@ -783,10 +783,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-36{
-  padding-top: 9rem;
-  padding-bottom: 9rem;
-}
 .py-14{
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
@@ -831,6 +827,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.pt-24{
+  padding-top: 6rem;
+}
+.pb-36{
+  padding-bottom: 9rem;
+}
 .pr-10{
   padding-right: 2.5rem;
 }
@@ -842,6 +844,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-14{
   padding-top: 3.5rem;
+}
+.pt-48{
+  padding-top: 12rem;
+}
+.pb-24{
+  padding-bottom: 6rem;
 }
 .text-center{
   text-align: center;
@@ -1685,6 +1693,29 @@ div.dropdown.open > div.list {
 
 .kontakt_popup__naziv {
   margin-bottom: 5px;
+}
+
+.konfigurator_grid li {
+  list-style-type: none;
+  margin-bottom: 100px;
+}
+.konfigurator_grid li a .titleCat_wrapper {
+  margin-top: 20px;
+}
+
+.konfigurator_categories li {
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottoM: 10px;
+  color: #888888;
+}
+.konfigurator_categories li:hover {
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+.konfigurator_categories li:hover a {
+  color: black;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {

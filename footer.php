@@ -104,7 +104,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					?>
 				</div>
 				<!-- SOCIAL MEDIA SECTION -->
-				<div class="absolute bottom-20 right-40">
+				<div class="absolute bottom-20 right-48">
 					<div class="mb-3">
 						<span class="text-xl text-white uppercase font-kanit font-normal ">Follow Us</span>
 					</div>

@@ -798,6 +798,38 @@ div.dropdown.open>div.list {
     margin-bottom: 5px;
 }
 
+.konfigurator_grid {
+    li {
+            list-style-type: none;
+            margin-bottom: 100px;
+
+            a {
+                .titleCat_wrapper {
+                    margin-top: 20px;
+                }
+            }
+        }
+}
+
+.konfigurator_categories {
+    li {
+        list-style-type: none;
+        margin-top: 10px;
+        margin-bottoM: 10px;
+        color: #888888;
+    }
+
+    li:hover {
+        transition: all 200ms ease-in;
+            transform: scale(1.1);
+        
+            a {
+                color: black;
+                font-weight: 400;
+            }
+    }
+}
+
 
 
 

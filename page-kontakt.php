@@ -9,11 +9,11 @@
             // Leaflet map
             var map = L.map('map').setView([44.211902, 17.926458], 8);
 
-            var CartoDB_DarkMatterNoLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-                attribution: 'Kalea,
-                subdomains: 'abcd',
-                maxZoom: 20
+            var Stadia_AlidadeSmoothDark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                maxZoom: 20,
+                attribution: 'Kalea'
             });
+            Stadia_AlidadeSmoothDark.addTo(map);
 
             // markers
             var fabrikaMarker = L.icon ({
