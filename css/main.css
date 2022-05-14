@@ -1,0 +1,1734 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);
+/*
+! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
+*/
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+::before,
+::after {
+  --tw-content: '';
+}
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+/*
+Remove the default font size and weight for headings.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+/*
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+/*
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+:-moz-focusring {
+  outline: auto;
+}
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+legend {
+  padding: 0;
+}
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*
+Prevent resizing textareas horizontally by default.
+*/
+textarea {
+  resize: vertical;
+}
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+/*
+Set the default cursor for buttons.
+*/
+button,
+[role="button"] {
+  cursor: pointer;
+}
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+/*
+Ensure the default browser behavior of the `hidden` attribute.
+*/
+[hidden] {
+  display: none;
+}
+*, ::before, ::after{
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+.container{
+  width: 100%;
+}
+@media (min-width: 100%){
+  .container{
+    max-width: 100%;
+  }
+}
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1700px){
+  .container{
+    max-width: 1700px;
+  }
+}
+.visible{
+  visibility: visible;
+}
+.absolute{
+  position: absolute;
+}
+.relative{
+  position: relative;
+}
+.top-2{
+  top: 0.5rem;
+}
+.-left-10{
+  left: -2.5rem;
+}
+.bottom-20{
+  bottom: 5rem;
+}
+.right-40{
+  right: 10rem;
+}
+.bottom-24{
+  bottom: 6rem;
+}
+.right-10{
+  right: 2.5rem;
+}
+.top-0{
+  top: 0px;
+}
+.right-0{
+  right: 0px;
+}
+.right-2{
+  right: 0.5rem;
+}
+.left-0{
+  left: 0px;
+}
+.bottom-0{
+  bottom: 0px;
+}
+.right-3{
+  right: 0.75rem;
+}
+.bottom-10{
+  bottom: 2.5rem;
+}
+.z-0{
+  z-index: 0;
+}
+.z-10{
+  z-index: 10;
+}
+.z-20{
+  z-index: 20;
+}
+.col-span-4{
+  grid-column: span 4 / span 4;
+}
+.col-span-7{
+  grid-column: span 7 / span 7;
+}
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.my-10{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.my-5{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.my-16{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.my-14{
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+.mb-8{
+  margin-bottom: 2rem;
+}
+.ml-16{
+  margin-left: 4rem;
+}
+.mb-3\.5{
+  margin-bottom: 0.875rem;
+}
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+.mr-4{
+  margin-right: 1rem;
+}
+.mt-24{
+  margin-top: 6rem;
+}
+.ml-5{
+  margin-left: 1.25rem;
+}
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+.mr-7{
+  margin-right: 1.75rem;
+}
+.ml-24{
+  margin-left: 6rem;
+}
+.mt-3{
+  margin-top: 0.75rem;
+}
+.-mt-16{
+  margin-top: -4rem;
+}
+.mt-10{
+  margin-top: 2.5rem;
+}
+.-mt-20{
+  margin-top: -5rem;
+}
+.-ml-10{
+  margin-left: -2.5rem;
+}
+.ml-10{
+  margin-left: 2.5rem;
+}
+.mb-16{
+  margin-bottom: 4rem;
+}
+.mb-14{
+  margin-bottom: 3.5rem;
+}
+.mr-5{
+  margin-right: 1.25rem;
+}
+.mb-24{
+  margin-bottom: 6rem;
+}
+.-mt-24{
+  margin-top: -6rem;
+}
+.mb-7{
+  margin-bottom: 1.75rem;
+}
+.ml-3{
+  margin-left: 0.75rem;
+}
+.mt-1\.5{
+  margin-top: 0.375rem;
+}
+.mt-1{
+  margin-top: 0.25rem;
+}
+.mt-16{
+  margin-top: 4rem;
+}
+.mt-4{
+  margin-top: 1rem;
+}
+.mt-14{
+  margin-top: 3.5rem;
+}
+.mt-12{
+  margin-top: 3rem;
+}
+.block{
+  display: block;
+}
+.flex{
+  display: flex;
+}
+.table{
+  display: table;
+}
+.grid{
+  display: grid;
+}
+.hidden{
+  display: none;
+}
+.h-screen{
+  height: 100vh;
+}
+.h-4\/6{
+  height: 66.666667%;
+}
+.h-2\/6{
+  height: 33.333333%;
+}
+.h-auto{
+  height: auto;
+}
+.h-3\/4{
+  height: 75%;
+}
+.h-3\/6{
+  height: 50%;
+}
+.w-full{
+  width: 100%;
+}
+.w-2\/3{
+  width: 66.666667%;
+}
+.w-4\/5{
+  width: 80%;
+}
+.w-5\/6{
+  width: 83.333333%;
+}
+.w-3\/4{
+  width: 75%;
+}
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.grid-cols-5{
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-8{
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+.grid-cols-7{
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-6{
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.justify-start{
+  justify-content: flex-start;
+}
+.justify-end{
+  justify-content: flex-end;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.gap-4{
+  gap: 1rem;
+}
+.gap-36{
+  gap: 9rem;
+}
+.gap-7{
+  gap: 1.75rem;
+}
+.gap-8{
+  gap: 2rem;
+}
+.gap-24{
+  gap: 6rem;
+}
+.gap-6{
+  gap: 1.5rem;
+}
+.rounded{
+  border-radius: 0.25rem;
+}
+.rounded-xl{
+  border-radius: 0.75rem;
+}
+.border{
+  border-width: 1px;
+}
+.border-2{
+  border-width: 2px;
+}
+.border-b-2{
+  border-bottom-width: 2px;
+}
+.border-t-2{
+  border-top-width: 2px;
+}
+.border-r{
+  border-right-width: 1px;
+}
+.border-l-4{
+  border-left-width: 4px;
+}
+.border-footerText{
+  --tw-border-opacity: 1;
+  border-color: rgb(136 136 136 / var(--tw-border-opacity));
+}
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+.border-white{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.bg-kompletnoOpremanjeBackground{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 34 34 / var(--tw-bg-opacity));
+}
+.bg-cartBackground{
+  --tw-bg-opacity: 1;
+  background-color: rgb(232 232 232 / var(--tw-bg-opacity));
+}
+.bg-grayText{
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 59 59 / var(--tw-bg-opacity));
+}
+.bg-konfiguratorRed{
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 29 36 / var(--tw-bg-opacity));
+}
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-transparent{
+  background-color: transparent;
+}
+.bg-aboutUsBackground{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 34 34 / var(--tw-bg-opacity));
+}
+.bg-grayBackground{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+.bg-addToCartButton{
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 0 27 / var(--tw-bg-opacity));
+}
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.p-3{
+  padding: 0.75rem;
+}
+.p-5{
+  padding: 1.25rem;
+}
+.p-10{
+  padding: 2.5rem;
+}
+.p-8{
+  padding: 2rem;
+}
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-36{
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.px-16{
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.py-28{
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.px-14{
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.pr-10{
+  padding-right: 2.5rem;
+}
+.pl-10{
+  padding-left: 2.5rem;
+}
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+.pt-14{
+  padding-top: 3.5rem;
+}
+.text-center{
+  text-align: center;
+}
+.font-kanit{
+  font-family: Kanit;
+}
+.font-lovelace{
+  font-family: Lovelace, sans-serif;
+}
+.font-montserrat{
+  font-family: Montserrat;
+}
+.font-calibri{
+  font-family: Calibri;
+}
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.font-light{
+  font-weight: 300;
+}
+.font-normal{
+  font-weight: 400;
+}
+.font-semibold{
+  font-weight: 600;
+}
+.font-extralight{
+  font-weight: 200;
+}
+.font-medium{
+  font-weight: 500;
+}
+.font-bold{
+  font-weight: 700;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.text-footerText{
+  --tw-text-opacity: 1;
+  color: rgb(136 136 136 / var(--tw-text-opacity));
+}
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-grayBackground{
+  --tw-text-opacity: 1;
+  color: rgb(229 229 229 / var(--tw-text-opacity));
+}
+.text-zinc-500{
+  --tw-text-opacity: 1;
+  color: rgb(113 113 122 / var(--tw-text-opacity));
+}
+.text-frontPageGray{
+  --tw-text-opacity: 1;
+  color: rgb(247 247 247 / var(--tw-text-opacity));
+}
+.text-grayText{
+  --tw-text-opacity: 1;
+  color: rgb(59 59 59 / var(--tw-text-opacity));
+}
+.text-headerDropDownTitle{
+  --tw-text-opacity: 1;
+  color: rgb(147 149 152 / var(--tw-text-opacity));
+}
+.text-kategorije{
+  --tw-text-opacity: 1;
+  color: rgb(136 136 136 / var(--tw-text-opacity));
+}
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-pageTitle{
+  --tw-text-opacity: 1;
+  color: rgb(25 25 25 / var(--tw-text-opacity));
+}
+.text-addToCartText{
+  --tw-text-opacity: 1;
+  color: rgb(228 205 205 / var(--tw-text-opacity));
+}
+.outline{
+  outline-style: solid;
+}
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.transition{
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+@font-face {
+  font-family: "Lovelace";
+  src: url("../assets/fonts/Zetafonts - Lovelace Text Regular.otf");
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("../assets/fonts/Calibri Regular.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.shop_menu .menu-item {
+  padding-left: 12px;
+  padding-right: 12px;
+  border-right: 2px solid white;
+}
+
+.products_categories .woocommerce .products .product-category {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+.products_categories .woocommerce .products .product-category a img {
+  display: none;
+}
+
+.product_type_simple {
+  display: none !important;
+}
+
+.attachment-woocommerce_thumbnail {
+  height: 150px !important;
+  width: 250px !important;
+}
+
+.woocommerce-loop-category__title mark {
+  display: none;
+}
+
+.woocommerce-result-count {
+  display: none;
+}
+
+.products_products .woocommerce-ordering {
+  display: none;
+}
+
+.woocommerce-products-header {
+  display: none;
+}
+
+#woocommerce-product-search-field-0 {
+  border-bottom: 1px solid #888888;
+}
+
+.woocommerce-product-search button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: rgb(60, 66, 87);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  display: inline-block;
+  min-height: 28px;
+  transition: background-color 0.24s, box-shadow 0.24s;
+}
+.woocommerce-product-search button :hover {
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.08) 0px 3px 9px 0px, rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.splide_image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.tehnicki_podaci__icon {
+  width: 25px;
+  height: 25px;
+}
+
+.konfigurator_text {
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+
+.embed-container iframe {
+  width: 100% !important;
+  height: 600px;
+}
+
+.singleProduct_pdfSlika {
+  width: 100% !important;
+  heigth: 100% !important;
+}
+
+.titleCat_wrapper {
+  display: flex;
+}
+
+.product_cat_title {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: #3B3B3B;
+}
+
+.product_cat_name {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 120%;
+  color: #7D7D7D;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.product_cat_spacer {
+  color: #7D7D7D;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.cart_totals {
+  width: 100% !important;
+}
+.cart_totals h2 {
+  display: none;
+}
+
+.page-header .entry-title {
+  display: none;
+}
+
+.checkout-button {
+  font-family: "Kanit" !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 21px !important;
+  letter-spacing: 0.002em !important;
+  margin-bottom: 0 !important;
+}
+
+.woocommerce a.button.alt {
+  background-color: #C3171E !important;
+  border-radius: 10px !important;
+}
+
+.table, td, th,
+.woocommerce-cart .cart-collaterals .cart_totals > h2,
+.woocommerce-cart .cart-collaterals .cross-sells > h2 {
+  border: none !important;
+}
+
+.cart_totals {
+  background-color: white !important;
+  padding: 20px !important;
+}
+
+.order-total th, .order-total td {
+  margin-top: 50px !important;
+  border-top: 1px solid #BFBFBF !important;
+}
+.order-total th {
+  font-family: "Kanit" !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 32px !important;
+}
+
+.korpa_orderTotal .woocommerce-Price-amount {
+  font-family: "Kanit" !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 32px !important;
+  color: #C3171E !important;
+}
+
+.datum_isporuke th {
+  padding-bottom: 30px !important;
+}
+
+.woocommerce table.shop_table {
+  border: none !important;
+}
+
+.product-thumbnail {
+  width: 250px !important;
+}
+
+.product-name {
+  width: 250px !important;
+}
+
+.product-thumbnail, .product-name, .product-subtotal, .product-remove {
+  border-bottom: 1px solid #BFBFBF !important;
+  padding-bottom: 20px !important;
+  padding-top: 50px !important;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce-page form .form-row input.input-text,
+.woocommerce-page form .form-row text area {
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  padding: 14px 10px;
+  font-family: "Kanit";
+  font-size: 16px;
+  color: black;
+  letter-spacing: 1px;
+  width: 100%;
+  outline: none;
+}
+
+.woocommerce-checkout-review-order-table thead tr .product-name {
+  width: 200px !important;
+}
+.woocommerce-checkout-review-order-table thead tr .product-total {
+  border-bottom: 1px solid #BFBFBF !important;
+}
+
+.cart_button {
+  background: #C3171E;
+  border-radius: 10px;
+}
+
+.woocommerce-checkout-payment {
+  background: white !important;
+}
+
+.singleProduct {
+  display: none !important;
+}
+
+.woocommerce-message {
+  margin-top: 2rem !important;
+}
+
+.attachment-post-thumbnail {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.font-5xl {
+  font-size: 48px;
+}
+
+.grid-item-2 .webShop_left {
+  order: 2;
+}
+.grid-item-2 .webShop_right {
+  order: 1;
+}
+
+.blogSection_image img {
+  width: 558px;
+  height: 352px;
+}
+
+.frontPage_blog__splide {
+  height: auto !important;
+}
+
+.novosti_Picture img {
+  width: 330px;
+  height: 230px;
+  border-radius: 10px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+  display: none;
+}
+
+/* transition */
+a {
+  transition: all 0.3s ease;
+}
+
+/* pagination */
+.nav-links a {
+  margin: 0 0.6rem;
+}
+
+.nav-links a.page-numbers {
+  color: #3B3B3B;
+}
+
+.nav-links a.page-numbers:hover {
+  color: #383838;
+}
+
+.nav-links .page-numbers.current,
+.nav-links .page-numbers.dots {
+  color: black;
+  padding: 0.2rem 0.5rem;
+  background: white;
+  border-radius: 5px;
+}
+
+.nav-links a.next,
+.nav-links a.prev {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background-color: #3B3B3B;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.nav-links a.next:hover,
+.nav-links a.prev:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #fff;
+}
+
+.projekti_pagination a {
+  padding: 0.2rem 0.5rem;
+}
+
+.aboutUs_info__number {
+  font-size: 64px;
+}
+
+.aboutUs_info {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__center {
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content 1fr;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 1.2rem;
+  align-items: center;
+}
+
+.aboutUs_onama__title {
+  text-align: center;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 20px 0;
+  grid-gap: 20px;
+  font-size: 48px;
+}
+
+.aboutUs_onama__title:after,
+.aboutUs_onama__title:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid white;
+}
+
+.aboutUs_product__chair {
+  position: absolute;
+  top: -40%;
+  right: 0;
+}
+
+.aboutUs_product__couch {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 1300px;
+  height: 700px;
+  position: absolute;
+  top: -300px;
+  left: -500px;
+}
+
+#aboutUs_kontaktirajteNas {
+  background-image: url("../assets/images/aboutUs/kalea-kontaktirajte-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.kompletnoOpremanje_image {
+  background-image: url("../assets/images/frontPageKompletnoOpremanje_kalea.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#map {
+  height: 100%;
+  z-index: 0;
+}
+
+.wp_label {
+  color: white;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 99.99%, rgba(34, 34, 34, 0) 100%);
+}
+
+.hero_video__overlay {
+  position: absolute;
+  top: -200px;
+  right: 0;
+  z-index: 0;
+}
+
+.heroImage_video__wrapper {
+  height: 95%;
+}
+
+.bottomVideo_video {
+  width: 100%;
+  height: 614px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.bottomVideo_blackOverlay {
+  width: 100%;
+  height: 614px;
+  background: linear-gradient(180deg, transparent 20%, transparent 20%, #000), linear-gradient(0, transparent 20%, transparent 20%, #000);
+}
+
+.bottomVideo_wrapper {
+  height: 614px;
+}
+
+.singlePost_hero_imageWrapper img {
+  position: absolute;
+  top: -100px;
+  right: 0;
+}
+
+.singlePost_hero__scrollAnimation {
+  position: absolute;
+  bottom: 200px;
+  right: 100px;
+}
+
+.singlePost_content__title {
+  font-size: 72px;
+}
+
+.header_dropdown {
+  width: 44px;
+  height: 45px;
+}
+
+input,
+select,
+textarea {
+  color: #000;
+  padding: 10px;
+}
+
+.wpcf7-form-control-wrap input {
+  width: 100%;
+  height: 2.5rem;
+  background: #C5C5C5;
+  border: 1px solid #9E9E9E;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.wpcf7-form-control-wrap textarea {
+  width: 100%;
+  height: 10rem;
+  background: #C5C5C5;
+  border: 1px solid #9E9E9E;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.wpcf7-submit {
+  padding: 16px 69px;
+  width: 185px;
+  height: 56px;
+  background: #454545;
+  color: white;
+}
+
+.wpcf7-response-output {
+  color: white;
+}
+
+.aboutUs_svginfo {
+  width: 90px;
+  height: 90px;
+}
+
+.post-categories li a {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 140%;
+  color: #888888;
+}
+
+.text-kategorije:hover {
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+.text-kategorije:hover a {
+  color: black;
+  font-weight: 400;
+}
+
+.header_profileIcon {
+  widtH: 16px;
+  height: 21px;
+}
+
+.header_cartIcon {
+  height: 23px;
+  width: 23px;
+}
+
+.header_dropdown {
+  width: 44px;
+  height: 45px;
+}
+
+.contact_name__wrapper {
+  -moz-columns: 2;
+       columns: 2;
+}
+
+div.dropdown {
+  position: relative;
+}
+
+div.dropdown > div.caption {
+  background-color: #C5C5C5;
+  padding: 11px 17px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+div.dropdown > div.list {
+  position: absolute;
+  z-index: 10;
+  background: #C5C5C5;
+  border: 1px solid #9E9E9E;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  display: none;
+}
+
+div.dropdown > div.list > div.item {
+  padding: 11px 17px;
+  cursor: pointer;
+}
+
+div.dropdown > div.list > div.item.selected {
+  font-weight: bold;
+}
+
+div.dropdown > div.caption:hover,
+div.dropdown > div.list > div.item:hover {
+  background-color: #e8f0fe;
+}
+
+div.dropdown.open > div.caption {
+  border-radius: 3px 3px 0 0;
+  border-bottom: solid 1px #999;
+}
+
+div.dropdown.open > div.list {
+  display: block;
+}
+
+.dropdown {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.header_dropdown__svg {
+  width: 100px;
+  height: 100px;
+}
+
+.kontakt_title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+}
+
+.my-div-icon {
+  display: flex !important;
+  justify-content: space-around;
+}
+.my-div-icon .kontakt_location__span {
+  margin-left: 10px !important;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.leaflet-popup-content {
+  position: relative;
+  width: 200px;
+  height: 180px;
+}
+
+.kontakt_popup__image {
+  position: absolute;
+  top: -85px;
+  left: -90px;
+  width: 200px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+}
+
+.kontakt_popup__content {
+  position: absolute;
+  bottom: 5px;
+}
+
+.kontakt_popup__naziv {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+  color: #000000;
+}
+
+.kontakt_popup__content p {
+  padding-top: 1px;
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 140%;
+  color: #888888;
+  margin: 0 !important;
+}
+
+.kontakt_popup__naziv {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .mobile_menu .menu-item {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+@media (min-width: 1024px){
+  .lg\:col-span-1{
+    grid-column: span 1 / span 1;
+  }
+  .lg\:block{
+    display: block;
+  }
+  .lg\:flex{
+    display: flex;
+  }
+  .lg\:grid{
+    display: grid;
+  }
+  .lg\:hidden{
+    display: none;
+  }
+  .lg\:w-4\/5{
+    width: 80%;
+  }
+  .lg\:w-9\/12{
+    width: 75%;
+  }
+  .lg\:border-r-2{
+    border-right-width: 2px;
+  }
+  .lg\:py-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  .lg\:text-left{
+    text-align: left;
+  }
+}

@@ -1,0 +1,824 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// importing custom fonts
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: 'Lovelace';
+    src: url('../assets/fonts/Zetafonts\ -\ Lovelace\ Text\ Regular.otf');
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../assets/fonts/Calibri\ Regular.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.shop_menu {
+    .menu-item {
+        padding-left: 12px;
+        padding-right: 12px;
+        border-right: 2px solid white;
+    }
+}
+
+.products_categories {
+    .woocommerce {
+        .products {
+            .product-category {
+                width: 100%;
+                display: block; 
+                margin: 0;
+                a {
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.product_type_simple {
+    display: none!important;
+}
+
+.attachment-woocommerce_thumbnail {
+    height: 150px!important;
+    width: 250px!important;
+}
+
+.woocommerce-loop-category__title {
+    mark {
+        display: none;
+    }
+}
+
+.woocommerce-result-count {
+    display: none;
+}
+
+.products_products {
+        .woocommerce-ordering {
+            display: none;
+        }
+}
+
+.woocommerce-products-header {
+    display: none;
+}
+
+#woocommerce-product-search-field-0 {
+    border-bottom: 1px solid #888888;
+}
+
+.woocommerce-product-search {
+    button {
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        color: rgb(60, 66, 87);
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+        rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+        rgb(0 0 0 / 12%) 0px 1px 1px 0px,
+        rgb(60 66 87 / 16%) 0px 0px 0px 1px,
+        rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+        rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+        rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 4px 8px;
+        display: inline-block;
+        min-height: 28px;
+        transition: background-color .24s,
+        box-shadow .24s;
+
+        :hover {
+            box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 3px 9px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+        }
+    }
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.splide_image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.tehnicki_podaci__icon {
+    width: 25px;
+    height: 25px;
+}
+
+.konfigurator_text {
+    position: absolute;
+    top: -25px;
+    left: 0;
+}
+
+.embed-container iframe {
+    width: 100% !important;
+    height: 600px;
+}
+
+.singleProduct_pdfSlika {
+    width: 100% !important;
+    heigth: 100% !important;
+}
+
+.titleCat_wrapper {
+    display: flex;
+}
+
+.product_cat_title {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: #3B3B3B;
+}
+
+.product_cat_name {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 120%;    
+    color: #7D7D7D;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.product_cat_spacer {
+    color: #7D7D7D;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cart_totals {
+    width: 100% !important;
+
+    h2 {
+        display: none; 
+    }
+}
+
+.page-header {
+    .entry-title {
+        display: none;
+    }
+}
+
+.checkout-button {
+    font-family: 'Kanit' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    letter-spacing: 0.002em !important;
+    margin-bottom: 0 !important;
+}
+
+.woocommerce a.button.alt {
+    background-color: #C3171E !important;
+    border-radius: 10px !important;
+}
+
+.table, td, th,
+.woocommerce-cart .cart-collaterals .cart_totals>h2,
+.woocommerce-cart .cart-collaterals .cross-sells>h2 {
+    border: none !important;
+}
+
+.cart_totals {
+    background-color: white !important;
+    padding: 20px !important;
+}
+
+
+.order-total {
+    th, td {
+        margin-top: 50px !important;
+        border-top : 1px solid #BFBFBF !important;
+    }
+
+    th {
+        font-family: 'Kanit' !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        font-size: 20px !important;
+        line-height: 32px !important;
+    }
+}
+
+.korpa_orderTotal {
+    .woocommerce-Price-amount {
+        font-family: 'Kanit' !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        font-size: 20px !important;
+        line-height: 32px !important;
+        color: #C3171E !important;
+    }
+}
+
+.datum_isporuke {
+    th {
+        padding-bottom: 30px !important;
+    }
+
+}
+
+.woocommerce table.shop_table {
+    border: none !important;
+}
+
+.product-thumbnail {
+    width: 250px !important;
+}
+
+.product-name {
+    width: 250px !important;
+}
+
+.product-thumbnail, .product-name, .product-subtotal, .product-remove {
+    border-bottom: 1px solid #BFBFBF !important;
+    padding-bottom: 20px !important;
+    padding-top: 50px !important;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce-page form .form-row input.input-text,
+.woocommerce-page form .form-row text area {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    padding: 14px 10px;
+    font-family: 'Kanit';
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    width: 100%;
+    outline: none;
+}
+
+.woocommerce-checkout-review-order-table {
+    thead {
+        tr {
+            .product-name {
+                width: 200px !important;
+            }
+            .product-total {
+                border-bottom: 1px solid #BFBFBF !important;
+            }
+        }
+    }
+}
+
+.cart_button {
+    background: #C3171E;
+    border-radius: 10px;
+}
+
+.woocommerce-checkout-payment {
+    background: white !important;
+}
+
+.singleProduct {
+    display: none !important;
+}
+
+.woocommerce-message {
+    margin-top: 2rem !important;
+}
+
+.attachment-post-thumbnail {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.font-5xl {
+    font-size: 48px;
+}
+
+.grid-item-2 {
+    .webShop_left {
+        order: 2;
+    }
+
+    .webShop_right {
+        order: 1;
+    }
+}
+
+.blogSection_image {
+    img {
+        width: 558px;
+        height: 352px;
+    }
+}
+
+.frontPage_blog__splide {
+    height: auto !important;
+}
+
+.novosti_Picture {
+    img {
+        width: 330px;
+        height: 230px;
+        border-radius: 10px;
+    }
+}
+
+// styling for pagination links
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+    display: none;
+}
+
+/* transition */
+a {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* pagination */
+.nav-links a {
+    margin: 0 .6rem;
+}
+
+.nav-links a.page-numbers {
+    color: #3B3B3B;
+}
+
+.nav-links a.page-numbers:hover {
+    color: #383838;
+}
+
+.nav-links .page-numbers.current,
+.nav-links .page-numbers.dots {
+    color: black;
+    padding: .2rem .5rem;
+    background: white;
+    border-radius: 5px;
+}
+
+.nav-links a.next,
+.nav-links a.prev {
+    display: inline-block;
+    padding: .2rem .8rem;
+    background-color: #3B3B3B;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.nav-links a.next:hover,
+.nav-links a.prev:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    color: #fff;
+}
+
+// projekti pagination 
+
+.projekti_pagination {
+    a {
+        padding: .2rem .5rem;
+    }
+}
+
+.aboutUs_info__number {
+    font-size: 64px;
+}
+
+.aboutUs_info {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__center {
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.2rem;
+    align-items: center;
+}
+
+.aboutUs_onama__title {
+    text-align:center;
+    text-transform:uppercase;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 20px 0;
+    grid-gap: 20px;
+    font-size: 48px;
+}
+
+.aboutUs_onama__title:after,
+.aboutUs_onama__title:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid white;
+}
+
+.aboutUs_product__chair {
+    position: absolute;
+    top: -40%;
+    right: 0;
+}
+
+.aboutUs_product__couch {
+    object-fit: contain;
+    width: 1300px;
+    height: 700px;
+    position: absolute;
+    top: -300px;
+    left: -500px;
+}
+
+#aboutUs_kontaktirajteNas {
+        background-image:url('../assets/images/aboutUs/kalea-kontaktirajte-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+.kompletnoOpremanje_image {
+    background-image:url('../assets/images/frontPageKompletnoOpremanje_kalea.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+}
+
+#map {
+    height: 100%;
+    z-index: 0;
+}
+
+// contact form
+.wp_label {
+    color: white;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 99.99%, rgba(34, 34, 34, 0) 100%);
+}
+
+.hero_video__overlay {
+    position: absolute;
+    top: -200px;
+    right: 0;
+    z-index: 0;
+}
+
+.heroImage_video__wrapper {
+    height: 95%;
+}
+
+.bottomVideo_video {
+    width: 100%;
+    height: 614px;
+    object-fit: fill;
+}
+
+.bottomVideo_blackOverlay {
+    width: 100%;
+    height: 614px;
+    background: linear-gradient(180deg, transparent 20%, transparent 20%, #000),
+    linear-gradient(0, transparent 20%, transparent 20%, #000);
+}
+
+.bottomVideo_wrapper {
+    height: 614px;
+}
+
+.singlePost_hero_imageWrapper {
+    img {
+        position: absolute;
+        top: -100px;
+        right: 0;
+    }
+}
+
+.singlePost_hero__scrollAnimation {
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
+}
+
+.singlePost_content__title {
+    font-size: 72px;
+}
+
+.header_dropdown {
+    width: 44px;
+    height: 45px;
+}
+
+// contact form
+
+input,
+select,
+textarea {
+    color: #000;
+    padding: 10px;
+}
+
+.wpcf7-form-control-wrap {
+    input {
+        width: 100%;
+        height: 2.5rem;
+        background: #C5C5C5;
+        border: 1px solid #9E9E9E;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        width: 100%;
+        height: 10rem;
+        background: #C5C5C5;
+        border: 1px solid #9E9E9E;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+.wpcf7-submit {
+        padding: 16px 69px;
+        width: 185px;
+        height: 56px;
+        background: #454545;
+        color: white;
+    }
+
+.wpcf7-response-output {
+    color: white;
+}
+
+.aboutUs_svginfo {
+    width: 90px;
+    height: 90px;
+}
+
+.post-categories {
+    li {
+        a {
+                font-family: 'Kanit';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 140%;
+                color: #888888;
+        }
+    }
+}
+
+.text-kategorije:hover {
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+    a {
+        color: black;
+        font-weight: 400;
+    }
+}
+
+.header_profileIcon {
+    widtH: 16px;
+    height: 21px;
+}
+
+.header_cartIcon {
+    height: 23px;
+    width: 23px;
+}
+
+.header_dropdown {
+    width: 44px;
+    height: 45px;
+}
+
+.contact_name__wrapper {
+    columns: 2;
+}
+
+div.dropdown {
+    position: relative;
+}
+
+div.dropdown>div.caption {
+    background-color: #C5C5C5;
+    padding: 11px 17px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+div.dropdown>div.list {
+    position: absolute;
+    z-index: 10;
+    background: #C5C5C5;
+    border: 1px solid #9E9E9E;
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+    display: none;
+}
+
+div.dropdown>div.list>div.item {
+    padding: 11px 17px;
+    cursor: pointer;
+}
+
+div.dropdown>div.list>div.item.selected {
+    font-weight: bold;
+}
+
+div.dropdown>div.caption:hover,
+div.dropdown>div.list>div.item:hover {
+    background-color: #e8f0fe
+}
+
+div.dropdown.open>div.caption {
+    border-radius: 3px 3px 0 0;
+    border-bottom: solid 1px #999;
+}
+
+div.dropdown.open>div.list {
+    display: block;
+}
+
+.dropdown {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header_dropdown__svg {
+    width: 100px;
+    height: 100px;
+}
+
+.kontakt_title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+}
+
+.my-div-icon {
+    display: flex !important;
+    justify-content: space-around;
+
+    .kontakt_location__span {
+        margin-left: 10px !important;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        white-space: nowrap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+
+    }
+}
+
+.leaflet-popup-content {
+    position: relative;
+    width: 200px;
+    height: 180px;
+}
+
+.kontakt_popup__image {
+    position: absolute;
+    top: -85px;
+    left: -90px;
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.35);
+}
+
+.kontakt_popup__content {
+    position: absolute;
+    bottom: 5px;
+}
+
+.kontakt_popup__naziv {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    color: #000000;
+}
+
+.kontakt_popup__content {
+    p {
+        padding-top: 1px;
+        font-family: 'Kanit';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 140%;
+        color: #888888;
+        margin: 0 !important;
+    }
+}
+
+.kontakt_popup__naziv {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+//tablet resolution 
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mobile_menu {
+        .menu-item {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        
+        }
+    }
+
+}
