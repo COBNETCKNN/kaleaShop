@@ -22,17 +22,55 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<img src="<?php echo get_template_directory_uri() . '/assets/images/Kalea logo sa crtom 1.png'; ?>" alt="Kalea Logo" class="mb-6 mx-auto">
 					</a>
 					<div class="footer_info__written relative">
-						<div class="footer_info__address mb-6">
-							<span class="block mb-2 text-sm text-footerText font-light font-kanit">+ 387 (0)33 40 24 44</span>
-							<span class="block mb-2 text-sm text-footerText font-light font-kanit">+ 387 (0)33 40 11 66</span>
+						<!-- TELEPHONE -->
+						<div class="grid grid-cols-6">
+							<!-- ICON SECTION -->
+							<div class="col-span-1">
+								<div class="mb-10">
+									<i class="text-xl text-white fa-solid fa-phone"></i>
+								</div>
+							</div>
+							<!-- INFO SECTION -->
+							<div class="col-span-5">
+								<div class="footer_info__address mb-6">
+									<span class="block mb-2 text-sm text-footerText font-light font-kanit">+ 387 (0)33 40 24 44</span>
+									<span class="block mb-2 text-sm text-footerText font-light font-kanit">+ 387 (0)33 40 11 66</span>
+								</div>
+							</div>
 						</div>
-						<div class="footer_info__location mb-6">
-							<span class="block mb-2 text-sm text-footerText font-light font-kanit">Bosanski put b.b. 71380 Ilijaš, BIH</span>	
+
+						<!-- ADDRESS -->
+						<div class="grid grid-cols-6">
+							<!-- ICON SECTION -->
+							<div class="col-span-1">
+								<div class="mb-8">
+									<i class="text-xl text-white fa-solid fa-location-dot"></i>
+								</div>
+							</div>
+							<!-- INFO SECTION -->
+							<div class="col-span-5">
+								<div class="footer_info__location mb-6">
+									<span class="block mb-2 text-sm text-footerText font-light font-kanit">Bosanski put b.b. 71380 Ilijaš, BIH</span>	
+								</div>
+							</div>
 						</div>
-						<div class="footer_info__emails mb-6">
-							<span class="block mb-2 text-sm text-footerText font-light font-kanit">kalea@kalea.ba</span>
-							<span class="block mb-2 text-sm text-footerText font-light font-kanit">marketing@kalea.ba</span>
-							<span class="block mb-2 text-sm text-footerText font-light font-kanit">racunovodstvo@kalea.ba</span>	
+
+						<!-- EMAIL -->
+						<div class="grid grid-cols-6">
+							<!-- ICON SECTION -->
+							<div class="col-span-1">
+								<div class="mb-10">
+									<i class="text-xl text-white fa-solid fa-envelope"></i>
+								</div>
+							</div>
+							<!-- INFO SECTION -->
+							<div class="col-span-5">
+								<div class="footer_info__emails mb-6">
+									<span class="block mb-2 text-sm text-footerText font-light font-kanit">kalea@kalea.ba</span>
+									<span class="block mb-2 text-sm text-footerText font-light font-kanit">marketing@kalea.ba</span>
+									<span class="block mb-2 text-sm text-footerText font-light font-kanit">racunovodstvo@kalea.ba</span>	
+								</div>
+							</div>
 						</div>
 						<div class="footer_info__years mb-6">
 							<div class="block text-center mb-2">
@@ -41,21 +79,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<span class="text-center block mb-2 text-sm text-footerText font-light font-kanit">VIŠE OD 25 GODINA SA VAMA</span>
 							<div class="block text-center">
 								<span class="text-center text-lg font-kanit mb-2 text-footerText font-normal border-t-2 border-footerText"><?php echo date("Y"); ?></span>
-							</div>
-						</div>
-						<!-- ICONS -->
-						<div class="absolute top-2 -left-10">
-							<!-- TELEPHONE -->
-							<div class="mb-10">
-								<i class="text-xl text-white fa-solid fa-phone"></i>
-							</div>
-							<!-- LOCATION -->
-							<div class="mb-8">
-								<i class="text-xl text-white fa-solid fa-location-dot"></i>
-							</div>
-							<!-- EMAIL -->
-							<div class="mb-10">
-								<i class="text-xl text-white fa-solid fa-envelope"></i>
 							</div>
 						</div>
 					</div>
@@ -104,9 +127,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 					?>
 				</div>
 				<!-- SOCIAL MEDIA SECTION -->
-				<div class="absolute bottom-20 right-48">
+				<div class="footer_followUs">
 					<div class="mb-3">
-						<span class="text-xl text-white uppercase font-kanit font-normal ">Follow Us</span>
+						<span class="text-xl text-white uppercase font-kanit font-normal ">PRATITE NAS</span>
 					</div>
 					<!-- SOCIAL MEDIA -->
 					<?php 
@@ -180,7 +203,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 		<!-- COPYRIGHT SECTION -->
 		<div class="hidden lg:flex justify-end text-white">
-			<a href="#" class="text-grayBackground font-kanit text-sm font-normal px-10 py-2">Politika Pirvatnosti</a>
+			<a href="#" class="text-grayBackground font-kanit text-sm font-normal px-10 py-2">Politika Privatnosti</a>
 			<a href="#" class="text-grayBackground font-kanit text-sm font-normal px-10 py-2">Opći uvjeti poslovanja</a>
 			<span class="text-zinc-500 font-kanit text-sm font-normal py-2">Copy right © <?php echo date("Y"); ?> KALEA All right reserved by <span class="text-grayBackground font-kanit text-sm font-normal">ACKE Creative Studio</span></span>
 		</div>

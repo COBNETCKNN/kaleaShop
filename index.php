@@ -2,10 +2,9 @@
 
 <section id="blog" class="bg-cartBackground py-28 -mt-16">
 	<div class="container mx-auto">
-		<div class="grid grid-cols-5 gap-4">
+		<div class="grid lg:grid-cols-5 gap-4">
 			<!-- CATEGORIES SECTION -->
-			
-			<div class="col-span-1 border-r border-black">
+			<div class="hidden lg:block col-span-1 border-r border-black">
 				<h1 class="text-3xl font-kanit font-light text-grayText uppercase">Novosti</h1>
 				<div class="mt-10">
 					<?php 
@@ -22,7 +21,7 @@
 			</div>
 			<!-- CONTENT SECTION -->
 			<div class="col-span-4">
-				<div class="grid grid-cols-2 gap-8">
+				<div class="grid lg:grid-cols-2 gap-8">
 				<?php 
 
 					$args = array(
@@ -44,7 +43,14 @@
 
 				</div>
 				<div class="flex justify-center mt-10">
-					<?php the_posts_pagination() ?>
+					<?php the_posts_pagination(
+						array(
+
+						'prev_text' => '<i class="fa-solid fa-arrow-left"></i>',
+						'next_text' => '<i class="fa-solid fa-arrow-right"></i>'
+
+						)
+						); ?>
 				</div>
 			</div>
 		</div>

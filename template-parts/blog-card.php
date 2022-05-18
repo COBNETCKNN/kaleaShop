@@ -1,7 +1,7 @@
 <div class="p-5 relative mb-10">
-    <div class="grid grid-cols-3">
+    <div class="grid grid-cols-4 gap-4">
         <!-- PICTURE -->
-        <div class="col-span-2 mx-auto">
+        <div class="col-span-2">
             <div class="novosti_Picture">
                 <a href="<?php the_permalink(); ?>">
                   <?php the_post_thumbnail('medium'); ?>
@@ -9,7 +9,7 @@
             </div>
         </div>
         <!-- TITLE -->
-        <div class="col-span-1">
+        <div class="col-span-2">
             <a href="<?php the_permalink(); ?>">
             <span class="text-xs font-kanit text-kategorije font-semibold"><?php echo the_category(); ?></span></a>
             <a href="<?php the_permalink(); ?>">
@@ -18,12 +18,10 @@
         </div>
     </div>
     <!-- CONTENT -->
-    <div class="mt-10 px-3 text-lg font-kanit font-light text-grayText">
+    <div class="mt-10 text-lg font-kanit font-light text-grayText">
         <a href="<?php the_permalink(); ?>">
             <?php 
-            
-            $blogKratkiText = get_field('kratki_text');
-            
+                $blogKratkiText = get_field('kratki_text');         
             ?>
             <?php echo $blogKratkiText; ?>
          </a>

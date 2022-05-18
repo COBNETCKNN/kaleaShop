@@ -19,10 +19,10 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<section id="korpa" class="bg-cartBackground py-14">
+<section id="korpa" class="bg-cartBackground pt-36 pb-14 -mt-24">
 <div class="container mx-auto font-kanit">
 	<h1 class="font-kanit text-4xl text-pageTitle font-medium mb-14"><?php echo get_the_title(); ?></h1>
-	<div class="grid grid-cols-3 gap-4">
+	<div class="lg:grid lg:grid-cols-3 gap-4">
 		<!-- LEFT SECTION -->
 		<div class="col-span-2">
 			<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
@@ -30,12 +30,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 				<thead>
-					<div class="container mx-auto">
+					<div class="hidden lg:block container mx-auto">
 						<div class="grid grid-cols-6 gap-4">
-							<div class="col-span-4">
+							<div class="col-span-3">
 								<span class="text-base font-kanit font-normal text-pageTitle">Naziv Proizvoda</span>
 							</div>
-							<div class="col-span-2">
+							<div class="col-span-3">
 								<span class="text-base font-kanit font-normal text-pageTitle">Cijena</span>
 							</div>
 						</div>
@@ -188,8 +188,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 		</div>
 		
 		<!-- RIGHT SECTION -->
-		<div class="col-span-1">
-			<div class="cart-collaterals">
+		<div class="mx-auto col-span-1">
+			<div class="cart-collaterals rounded-xl">
 				<?php
 					/**
 					 * Cart collaterals hook.

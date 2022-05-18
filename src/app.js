@@ -108,8 +108,6 @@ ScrollReveal().reveal(".slide_bottom", {
   easing: "ease-in-out"
 });
 
-
-
 ScrollReveal().reveal('.scroll_short', { delay: 800, easing: "ease-in-out" });
 ScrollReveal().reveal('.scroll_fast', { delay: 1200, easing: "ease-in-out" });
 ScrollReveal().reveal('.scroll_faster', { delay: 1500, easing: "ease-in-out" });
@@ -122,6 +120,118 @@ lightbox.option({
   'maxWidth': 1300
   
 })
+
+// Slick carousel
+
+jQuery('.single-item').slick();
+
+jQuery('.center').slick({
+  centerMode: true,
+  centerPadding: '350px',
+  slidesToShow: 1,
+  centerMode: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+jQuery('.singleProduct_slick').slick({
+  centerMode: true,
+  centerPadding: '200px',
+  slidesToShow: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+jQuery('.singleProduct_pdf__slider').slick({
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+jQuery('.singlePost_slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  arrows: true,
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
 
 
 var third = new Splide('#third', {

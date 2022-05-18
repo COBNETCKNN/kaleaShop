@@ -396,12 +396,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-left-10{
   left: -2.5rem;
 }
-.bottom-20{
-  bottom: 5rem;
-}
-.right-48{
-  right: 12rem;
-}
 .bottom-24{
   bottom: 6rem;
 }
@@ -420,14 +414,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .left-0{
   left: 0px;
 }
+.bottom-36{
+  bottom: 9rem;
+}
+.right-14{
+  right: 3.5rem;
+}
 .bottom-0{
   bottom: 0px;
 }
 .right-3{
   right: 0.75rem;
 }
-.bottom-10{
-  bottom: 2.5rem;
+.left-10{
+  left: 2.5rem;
 }
 .z-0{
   z-index: 0;
@@ -438,21 +438,31 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-20{
   z-index: 20;
 }
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
 .col-span-4{
   grid-column: span 4 / span 4;
 }
 .col-span-7{
   grid-column: span 7 / span 7;
 }
-.col-span-1{
-  grid-column: span 1 / span 1;
-}
 .col-span-2{
   grid-column: span 2 / span 2;
+}
+.col-span-3{
+  grid-column: span 3 / span 3;
+}
+.col-span-5{
+  grid-column: span 5 / span 5;
 }
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .my-auto{
   margin-top: auto;
@@ -474,17 +484,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-.my-16{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
 .my-14{
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
+}
+.-mt-16{
+  margin-top: -4rem;
+}
+.mt-10{
+  margin-top: 2.5rem;
 }
 .mb-6{
   margin-bottom: 1.5rem;
@@ -528,11 +536,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-3{
   margin-top: 0.75rem;
 }
-.-mt-16{
-  margin-top: -4rem;
-}
-.mt-10{
-  margin-top: 2.5rem;
+.-mt-24{
+  margin-top: -6rem;
 }
 .-mt-20{
   margin-top: -5rem;
@@ -555,14 +560,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-24{
   margin-bottom: 6rem;
 }
-.-mt-24{
-  margin-top: -6rem;
-}
 .mb-7{
   margin-bottom: 1.75rem;
 }
 .ml-3{
   margin-left: 0.75rem;
+}
+.mt-14{
+  margin-top: 3.5rem;
 }
 .mt-1\.5{
   margin-top: 0.375rem;
@@ -570,14 +575,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-1{
   margin-top: 0.25rem;
 }
+.mt-5{
+  margin-top: 1.25rem;
+}
 .mt-16{
   margin-top: 4rem;
 }
 .mt-4{
   margin-top: 1rem;
 }
-.mt-14{
-  margin-top: 3.5rem;
+.mr-2{
+  margin-right: 0.5rem;
 }
 .mt-12{
   margin-top: 3rem;
@@ -600,11 +608,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-screen{
   height: 100vh;
 }
+.h-full{
+  height: 100%;
+}
 .h-4\/6{
   height: 66.666667%;
-}
-.h-2\/6{
-  height: 33.333333%;
 }
 .h-auto{
   height: auto;
@@ -612,17 +620,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-3\/4{
   height: 75%;
 }
-.h-3\/6{
-  height: 50%;
-}
 .w-full{
   width: 100%;
-}
-.w-2\/3{
-  width: 66.666667%;
-}
-.w-4\/5{
-  width: 80%;
 }
 .w-5\/6{
   width: 83.333333%;
@@ -639,14 +638,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 .grid-cols-8{
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 .grid-cols-7{
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -669,20 +668,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-4{
   gap: 1rem;
 }
-.gap-36{
-  gap: 9rem;
-}
-.gap-7{
-  gap: 1.75rem;
-}
 .gap-8{
   gap: 2rem;
 }
+.gap-36{
+  gap: 9rem;
+}
 .gap-24{
   gap: 6rem;
-}
-.gap-6{
-  gap: 1.5rem;
 }
 .rounded{
   border-radius: 0.25rem;
@@ -696,37 +689,37 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-2{
   border-width: 2px;
 }
+.border-r{
+  border-right-width: 1px;
+}
 .border-b-2{
   border-bottom-width: 2px;
 }
 .border-t-2{
   border-top-width: 2px;
 }
-.border-r{
-  border-right-width: 1px;
-}
 .border-l-4{
   border-left-width: 4px;
-}
-.border-footerText{
-  --tw-border-opacity: 1;
-  border-color: rgb(136 136 136 / var(--tw-border-opacity));
 }
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
+.border-footerText{
+  --tw-border-opacity: 1;
+  border-color: rgb(136 136 136 / var(--tw-border-opacity));
+}
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
-.bg-kompletnoOpremanjeBackground{
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 34 34 / var(--tw-bg-opacity));
-}
 .bg-cartBackground{
   --tw-bg-opacity: 1;
   background-color: rgb(232 232 232 / var(--tw-bg-opacity));
+}
+.bg-kompletnoOpremanjeBackground{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 34 34 / var(--tw-bg-opacity));
 }
 .bg-grayText{
   --tw-bg-opacity: 1;
@@ -740,9 +733,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-.bg-transparent{
-  background-color: transparent;
-}
 .bg-aboutUsBackground{
   --tw-bg-opacity: 1;
   background-color: rgb(34 34 34 / var(--tw-bg-opacity));
@@ -750,6 +740,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-grayBackground{
   --tw-bg-opacity: 1;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+.bg-transparent{
+  background-color: transparent;
 }
 .bg-addToCartButton{
   --tw-bg-opacity: 1;
@@ -771,6 +764,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-8{
   padding: 2rem;
 }
+.py-28{
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -783,9 +780,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-14{
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .py-5{
   padding-top: 1.25rem;
@@ -794,6 +791,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-16{
   padding-left: 4rem;
   padding-right: 4rem;
+}
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 .py-0{
   padding-top: 0px;
@@ -806,10 +807,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-.py-28{
-  padding-top: 7rem;
-  padding-bottom: 7rem;
 }
 .py-24{
   padding-top: 6rem;
@@ -827,11 +824,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
 .pt-24{
   padding-top: 6rem;
 }
 .pb-36{
   padding-bottom: 9rem;
+}
+.pt-36{
+  padding-top: 9rem;
+}
+.pb-24{
+  padding-bottom: 6rem;
 }
 .pr-10{
   padding-right: 2.5rem;
@@ -842,14 +849,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-10{
   padding-bottom: 2.5rem;
 }
-.pt-14{
-  padding-top: 3.5rem;
+.pb-14{
+  padding-bottom: 3.5rem;
 }
 .pt-48{
   padding-top: 12rem;
 }
-.pb-24{
-  padding-bottom: 6rem;
+.pt-14{
+  padding-top: 3.5rem;
 }
 .text-center{
   text-align: center;
@@ -866,16 +873,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-calibri{
   font-family: Calibri;
 }
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 .text-lg{
   font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-.text-xl{
-  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 .text-2xl{
@@ -889,10 +900,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 .text-xs{
   font-size: 0.75rem;
@@ -919,6 +926,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .uppercase{
   text-transform: uppercase;
 }
+.text-grayText{
+  --tw-text-opacity: 1;
+  color: rgb(59 59 59 / var(--tw-text-opacity));
+}
+.text-kategorije{
+  --tw-text-opacity: 1;
+  color: rgb(136 136 136 / var(--tw-text-opacity));
+}
 .text-footerText{
   --tw-text-opacity: 1;
   color: rgb(136 136 136 / var(--tw-text-opacity));
@@ -939,17 +954,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(247 247 247 / var(--tw-text-opacity));
 }
-.text-grayText{
-  --tw-text-opacity: 1;
-  color: rgb(59 59 59 / var(--tw-text-opacity));
-}
 .text-headerDropDownTitle{
   --tw-text-opacity: 1;
   color: rgb(147 149 152 / var(--tw-text-opacity));
-}
-.text-kategorije{
-  --tw-text-opacity: 1;
-  color: rgb(136 136 136 / var(--tw-text-opacity));
 }
 .text-black{
   --tw-text-opacity: 1;
@@ -1064,15 +1071,6 @@ button:focus {
   outline: none;
 }
 
-.splide_image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain !important;
-     object-fit: contain !important;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
 .tehnicki_podaci__icon {
   width: 25px;
   height: 25px;
@@ -1091,7 +1089,9 @@ button:focus {
 
 .singleProduct_pdfSlika {
   width: 100% !important;
-  heigth: 100% !important;
+  height: 100% !important;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .titleCat_wrapper {
@@ -1126,6 +1126,7 @@ button:focus {
 
 .cart_totals {
   width: 100% !important;
+  border-radius: 0.75rem;
 }
 .cart_totals h2 {
   display: none;
@@ -1195,7 +1196,7 @@ button:focus {
 }
 
 .product-name {
-  width: 250px !important;
+  width: 310px !important;
 }
 
 .product-thumbnail, .product-name, .product-subtotal, .product-remove {
@@ -1265,7 +1266,7 @@ button:focus {
 
 .blogSection_image img {
   width: 558px;
-  height: 352px;
+  height: 302px;
 }
 
 .frontPage_blog__splide {
@@ -1340,7 +1341,7 @@ a {
 .nav-links a.next,
 .nav-links a.prev {
   display: inline-block;
-  padding: 0.2rem 0.8rem;
+  padding: 0.5rem 0.8rem;
   background-color: #3B3B3B;
   color: #fff;
   border-radius: 2px;
@@ -1485,11 +1486,6 @@ header {
   font-size: 72px;
 }
 
-.header_dropdown {
-  width: 44px;
-  height: 45px;
-}
-
 input,
 select,
 textarea {
@@ -1559,11 +1555,6 @@ textarea {
   width: 23px;
 }
 
-.header_dropdown {
-  width: 44px;
-  height: 45px;
-}
-
 .contact_name__wrapper {
   -moz-columns: 2;
        columns: 2;
@@ -1619,8 +1610,8 @@ div.dropdown.open > div.list {
 }
 
 .header_dropdown__svg {
-  width: 100px;
-  height: 100px;
+  width: 80px !important;
+  height: 80px !important;
 }
 
 .kontakt_title {
@@ -1691,6 +1682,20 @@ div.dropdown.open > div.list {
   margin: 0 !important;
 }
 
+.kontakt_popup__nopicture {
+  margin-top: 50px;
+}
+.kontakt_popup__nopicture p {
+  padding-top: 1px;
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 140%;
+  color: #888888;
+  margin: 0 !important;
+}
+
 .kontakt_popup__naziv {
   margin-bottom: 5px;
 }
@@ -1718,10 +1723,197 @@ div.dropdown.open > div.list {
   font-weight: 400;
 }
 
+.span_shop__red {
+  color: red;
+}
+
+.slick-slide {
+  display: grid !important;
+  height: auto !important;
+}
+
+.singleProduct_slick .slick-list {
+  height: 500px;
+}
+
+.singleProduct_slick__image {
+  height: 500px !important;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.singleProduct_hero__image img {
+  height: 100vh !important;
+}
+
+.woocommerce-message {
+  width: 700px;
+  position: absolute;
+  z-index: 10;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-color: #EB001B !important;
+}
+.woocommerce-message .wc-forward {
+  background-color: #EB001B !important;
+  color: white !important;
+}
+
+.woocommerce-message::before {
+  content: "\e015";
+  color: #EB001B !important;
+}
+
+.addToCart_button {
+  white-space: nowrap;
+  height: 50px;
+  width: 200px;
+}
+
+.konfigurator_button {
+  white-space: nowrap;
+  height: 50px;
+  width: 250px;
+}
+
+.singlePost_slider {
+  padding-left: 50px;
+}
+.singlePost_slider .slick-list .slick-track img {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.singlePost_slider .slick-prev {
+  left: 30px !important;
+  z-index: 10;
+}
+.singlePost_slider .slick-next {
+  right: 30px !important;
+  z-index: 10;
+}
+.singlePost_slider .slick-prev:before {
+  content: "<";
+  color: white;
+  font-size: 50px;
+}
+.singlePost_slider .slick-next:before {
+  content: ">";
+  color: white;
+  font-size: 50px;
+}
+
+#bottomVideo .bottomVideo_blackOverlay {
+  box-shadow: 0 0 40px black;
+}
+
+.slick-slide {
+  opacity: 0.2;
+  transition: opacity 0.3s ease-out;
+}
+
+.slick-active {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease-in;
+}
+
+.footer_followUs {
+  position: absolute;
+  bottom: 5rem;
+  right: 12rem;
+}
+
 @media (max-width: 768px) {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .hero_video__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+  .hero_video__overlay video {
+    height: 100vh;
+    width: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+
+  .grid-item-2 .webShop_left {
+    order: 1;
+  }
+  .grid-item-2 .webShop_right {
+    order: 2;
+  }
+
+  .posljednjeNovosti_grid {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .slick-list {
+    height: auto !important;
+  }
+
+  .aboutUs_info {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .aboutUs_product__couch {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 1300px;
+    height: 700px;
+    position: absolute;
+    top: -350px;
+    left: 0;
+  }
+
+  .contact_button {
+    width: 100%;
+    display: block;
+  }
+  .contact_button input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact_button span {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .konfigurator_grid li {
+    margin-bottom: 30px;
+  }
+
+  .addToCart_button {
+    white-space: nowrap;
+    height: 50px;
+    width: 200px;
+  }
+
+  .konfigurator_span {
+    white-space: nowrap;
+  }
+
+  .singlePost_content__title {
+    font-size: 52px;
+  }
+
+  .product-name {
+    width: 100% !important;
   }
 }
 @media (max-width: 1024px) {
@@ -1730,9 +1922,55 @@ div.dropdown.open > div.list {
     padding-bottom: 0.5rem;
   }
 }
+@media (min-width: 600px) and (max-width: 1280px) {
+  .footer_followUs {
+    position: absolute;
+    bottom: 5rem;
+    right: 3rem;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1680px) {
+  .footer_followUs {
+    position: absolute;
+    bottom: 5rem;
+    right: 7rem;
+  }
+}
 @media (min-width: 1024px){
   .lg\:col-span-1{
     grid-column: span 1 / span 1;
+  }
+  .lg\:col-span-4{
+    grid-column: span 4 / span 4;
+  }
+  .lg\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+  .lg\:my-24{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+  .lg\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .lg\:mt-0{
+    margin-top: 0px;
+  }
+  .lg\:mb-0{
+    margin-bottom: 0px;
+  }
+  .lg\:mt-16{
+    margin-top: 4rem;
+  }
+  .lg\:mt-10{
+    margin-top: 2.5rem;
+  }
+  .lg\:ml-10{
+    margin-left: 2.5rem;
+  }
+  .lg\:mr-7{
+    margin-right: 1.75rem;
   }
   .lg\:block{
     display: block;
@@ -1749,17 +1987,56 @@ div.dropdown.open > div.list {
   .lg\:w-4\/5{
     width: 80%;
   }
+  .lg\:w-2\/3{
+    width: 66.666667%;
+  }
   .lg\:w-9\/12{
     width: 75%;
   }
+  .lg\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .lg\:justify-start{
+    justify-content: flex-start;
+  }
+  .lg\:gap-0{
+    gap: 0px;
+  }
   .lg\:border-r-2{
     border-right-width: 2px;
+  }
+  .lg\:border-r{
+    border-right-width: 1px;
+  }
+  .lg\:py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
   .lg\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
+  .lg\:py-24{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .lg\:pt-48{
+    padding-top: 12rem;
+  }
   .lg\:text-left{
     text-align: left;
+  }
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }

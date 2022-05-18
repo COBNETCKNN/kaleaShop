@@ -4,24 +4,24 @@
 <!-- HERO SECTION -->
 <section id="heroImage" class="bg-kompletnoOpremanjeBackground h-screen">
     <div class="w-full heroImage_video__wrapper relative h-screen">
-        <div class="hero_video__overlay h-screen">
+        <div class="hero_video__overlay h-full">
             <video autoplay muted loop id="myVideo">
             <source src="<?php echo get_template_directory_uri() . '/assets/images/Video Pocetna 1 Loop.mp4'; ?>" type="video/mp4">
             </video>
         </div>
-        <lottie-player class="absolute bottom-24 right-10" src="https://assets5.lottiefiles.com/packages/lf20_bf7dckfo.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop autoplay></lottie-player>
+        <lottie-player class="hidden lg:block absolute bottom-24 right-10" src="https://assets5.lottiefiles.com/packages/lf20_bf7dckfo.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop autoplay></lottie-player>
     </div>
 </section>
 <!-- KOMPLETNO OPREMANJE SECTION -->
 <section id="kompletnoOpremanje" class="bg-kompletnoOpremanjeBackground">
     <div class="container mx-auto">
-        <div class="grid grid-cols-2 gap-4 pt-24 pb-36">
+        <div class="grid lg:grid-cols-2 gap-4 pt-24 pb-36">
             <!-- LEFT SIDE -->
             <div class="my-auto">
-              <h2 class="slide_right kompletnoOpremanje_heading font-5xl font-lovelace font-normal text-frontPageGray">Kompletno opremanje</h2>
+              <h2 class="text-center lg:text-left slide_right kompletnoOpremanje_heading font-5xl font-lovelace font-normal text-frontPageGray">Kompletno opremanje</h2>
             </div>
             <!-- RIGHT SIDE -->
-            <div class="slide_left kompletnoOpremanje_paragraph">
+            <div class="slide_left kompletnoOpremanje_paragraph text-center lg:text-left ">
                 <p class="font-kanit font-extralight text-2xl text-frontPageGray mb-10 ">Opremanje enterijera zahtjeva stručnost, inspiraciju i slobodu kreativnosti. Trendovi budućnosti diktiraju spoj struke i individualno-kreativnih ideja.</p>
                 <p class="font-kanit font-extralight text-2xl text-frontPageGray">Nesumnjivo prateći savremene trendove fabrika namještaja KALEA nudi platformu zajedničke kreativnosti i stvaranja u vašem domu. Spojem dizajnerske stručnosti i vaših ličnih kreacija nastaju umjetnička djela u obliku modernog namještaja za vaš dom.</p>
             </div>
@@ -34,7 +34,7 @@
 
 
 <!-- WEB SHOP SECTION -->
-<section id="webShop" class="py-14 bg-cartBackground">
+<section id="webShop" class="py-8 lg:py-14 bg-cartBackground">
     <div class="container mx-auto">
 
         <?php 
@@ -60,9 +60,9 @@
             $frontPageRedirectLink = get_field('link_front_page_post');
 
             ?>
-        <div class="grid grid-cols-2 gap-36 grid-item-<?php echo $i; ?> py-10">
+        <div class="grid lg:grid-cols-2 gap-36 grid-item-<?php echo $i; ?> py-10">
             <!-- LEFT SECTION -->
-            <div class="scroll__short webShop_left font-5xl font-lovelace font-normal text-grayText">
+            <div class="scroll__short webShop_left font-5xl font-lovelace font-normal text-grayText text-center lg:text-left">
                 <h1 class="scroll_short font-light mb-10 tags"><?php the_title(); ?></h1>
                 <div class="scroll_fast font-kanit font-light text-base text-grayText mb-10"><?php the_content(); ?></div>
                 <a href="<?php echo $frontPageRedirectLink; ?>">
@@ -82,65 +82,63 @@
 
 <!-- BLOG SECTION -->
 <section id="blog" class="bg-kompletnoOpremanjeBackground py-10">
-            <div class="container mx-auto">
-                <span class="block font-5xl font-lovelace font-semibold text-white uppercase">Posljednje</span>
-                <span class="text-2xl font-lovelace font-semibold text-white uppercase"> novosti</span>
+    <div class="container mx-auto">
+        <span class="block font-5xl font-lovelace font-semibold text-white uppercase">Posljednje</span>
+        <span class="text-2xl font-lovelace font-semibold text-white uppercase"> novosti</span>
+    </div>
+    <!-- SLICK SLIDER -->
+    <div class="center mt-24 lg:mt-0 lg:my-24">
+        <?php 
+        
+        $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => -1,
+            'meta_query' => array(
+            array(
+                'key' => 'show_post_front_page',
+                'value' => '"Ne"',
+                'compare' => 'LIKE',
+            )
+            )
+        );
+
+        $heroBlogQuery = new WP_Query($args);
+
+        while($heroBlogQuery->have_posts()){
+        $heroBlogQuery->the_post(); ?>
+        
+        <div class="posljednjeNovosti_grid grid lg:grid-cols-2 mt-24">
+            <!-- LEFT SIDE -->
+            <div class="blogSection_image">
+                <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail('medium_large'); ?>
+                </a>
+                
             </div>
-
-            <section id="third" class="blog_slider splide mt-24" aria-label="Basic Structure Example">
-            <div class="splide__track">
-                <ul class="splide__list frontPage_blog__splide">
-
-            <?php 
-            
-            $args = array(
-                'post_type' => 'post',
-                'posts_per_page' => -1,
-                'meta_query' => array(
-                array(
-                    'key' => 'show_post_front_page',
-                    'value' => '"Ne"',
-                    'compare' => 'LIKE',
-                )
-                )
-            );
-
-            $heroBlogQuery = new WP_Query($args);
-
-            while($heroBlogQuery->have_posts()){
-             $heroBlogQuery->the_post(); ?>
-            
-
-                <div class="splide__slide grid grid-cols-2 gap-7 h-2/6">
-                    <!-- LEFT SIDE -->
-                    <div class="blogSection_image">
-                        <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail('medium_large'); ?>
-                        </a>
+            <!-- RIGHT SIDE -->
+            <div class="mt-10 lg:w-2/3">
+                <a href="<?php the_permalink(); ?>">
+                    <h1 class="text-2xl font-lovelace font-light text-white mb-10"><?php the_title(); ?></h1>
+                    <div class="text-sm font-kanit font-light text-white">
+                        <?php 
+                            $blogKratkiText = get_field('kratki_text');         
+                            echo $blogKratkiText; ?>
                     </div>
-                    <!-- RIGHT SIDE -->
-                    <div class="w-2/3">
-                        <a href="<?php the_permalink(); ?>">
-                            <h1 class="text-2xl font-lovelace font-light text-white mb-10"><?php the_title(); ?></h1>
-                            <div class="text-sm font-kanit font-light text-white">
-                                <?php 
-                                    $blogKratkiText = get_field('kratki_text');         
-                                    echo $blogKratkiText; ?>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-          <?php }
-            wp_reset_postdata();
-          ?>
-
-            </ul>
+                </a>
+            </div>
         </div>
-        </section>
+        <?php }
+            wp_reset_postdata();
+        ?>
+
+    </div>
+    <div class="latestNews_overlay">
+
+    </div>
 </section>
 
 <!-- BOTTOM VIDEO -->
-<section id="bottomVideo" class="w-full h-auto">
+<section id="bottomVideo" class="w-full h-auto py-14 bg-kompletnoOpremanjeBackground">
     <div class="bottomVideo_wrapper w-full relative">
         <video class="bottomVideo_video absolute top-0 right-0 z-0" autoplay muted loop id="myVideo">
         <source src="<?php echo get_template_directory_uri() . '/assets/images/Video Pocetna 2 Loop.mp4'; ?>" type="video/mp4">

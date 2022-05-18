@@ -76,7 +76,7 @@ function title_cart_totals() {
 add_action('woocommerce_before_checkout_form', 'container_for_checkout');
 
 function container_for_checkout() {
-    echo '<section class="bg-cartBackground font-kanit py-14">';
+    echo '<section class="bg-cartBackground font-kanit -mt-24 pt-36 pb-14">';
     echo '<div class="container mx-auto">';
 }
 

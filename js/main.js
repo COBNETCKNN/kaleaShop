@@ -1,4 +1,8 @@
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 jQuery(document).ready(function (jQuery) {
+  var _jQuery$slick;
+
   // mobile menu
   jQuery(".nav-toggler").click(function () {
     jQuery("#navigation").toggle("slide");
@@ -106,6 +110,96 @@ jQuery(document).ready(function (jQuery) {
     'wrapAround': true,
     'maxHeight': 700,
     'maxWidth': 1300
+  }); // Slick carousel
+
+  jQuery('.single-item').slick();
+  jQuery('.center').slick((_jQuery$slick = {
+    centerMode: true,
+    centerPadding: '350px',
+    slidesToShow: 1
+  }, _defineProperty(_jQuery$slick, "centerMode", true), _defineProperty(_jQuery$slick, "autoplay", true), _defineProperty(_jQuery$slick, "autoplaySpeed", 3000), _defineProperty(_jQuery$slick, "responsive", [{
+    breakpoint: 768,
+    settings: {
+      arrows: false,
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 3
+    }
+  }, {
+    breakpoint: 480,
+    settings: {
+      arrows: false,
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 1
+    }
+  }]), _jQuery$slick));
+  jQuery('.singleProduct_slick').slick({
+    centerMode: true,
+    centerPadding: '200px',
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }]
+  });
+  jQuery('.singleProduct_pdf__slider').slick({
+    slidesToShow: 3,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }]
+  });
+  jQuery('.singlePost_slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }]
   });
   var third = new Splide('#third', {
     type: 'loop',

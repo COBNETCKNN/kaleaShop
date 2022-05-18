@@ -191,6 +191,12 @@ function kaleshop_files() {
 	wp_enqueue_style('leafletCSS', 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css');
 	wp_enqueue_style('fontAwesomeCSS', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
 	wp_enqueue_style('AOSscrollCSS', get_template_directory_uri() . '/aos-master/dist/aos.css');
+	// slick CSS
+	wp_enqueue_style('slickCSS', get_template_directory_uri() . '/slick-1.8.1/slick/slick.css');
+	wp_enqueue_style('slickThemeCSS', get_template_directory_uri() . '/slick-1.8.1/slick/slick-theme.css');
+	// owl carousel
+	wp_enqueue_style('OwlCSS', get_template_directory_uri() . '/OwlCarousel2-develop/dist/assets/owl.carousel.min.css');
+	wp_enqueue_style('OwlDefaultCss', get_template_directory_uri() . '/OwlCarousel2-develop/dist/assets/owl.theme.default.min.css');
     
     //enqueing JS
     wp_enqueue_script('jquery');
@@ -202,6 +208,11 @@ function kaleshop_files() {
 	wp_enqueue_script('lottieAnimation', 'https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js');
 	wp_enqueue_script('AOSscrollJS', get_stylesheet_directory_uri() . '/aos-master/dist/aos.js', array(), 1.0, true);
 	wp_enqueue_script('scrollRevealJS', 'https://unpkg.com/scrollreveal');
+	// slick JS
+	wp_enqueue_script('slickJS', get_stylesheet_directory_uri() . '/slick-1.8.1/slick/slick.min.js', array(), 1.0, true);
+	// owl JS
+	wp_enqueue_script('slickJS', get_stylesheet_directory_uri() . '/OwlCarousel2-develop/dist/owl.carousel.min.js', array(), 1.0, true);
+
 
 }
 add_action('wp_enqueue_scripts', 'kaleshop_files');
@@ -223,3 +234,4 @@ function ( $exclude_filters ) {
   return $exclude_filters;
 } );
 
+add_theme_support( 'woocommerce' );

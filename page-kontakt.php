@@ -238,26 +238,201 @@
             // SALON INTERIJER FRANIĆ
             var photoImgSalonFranić = '<img class="kontakt_popup__image" src="https://i.ibb.co/MSqBj2J/Kalea-Mostar.jpg" height="120px" width="300px"/>';
 
-            L.marker([43.368859, 17.839466], {
+            L.marker([43.5273793, 16.4833746], {
                 icon: new L.DivIcon({
                 className: 'my-div-icon',
-                html: '<img class="my-div-image" src="https://i.ibb.co/Z6sKdDm/location-svg.png"/>'+
-                '<span class="kontakt_location__span">Salon Mostar</span>'
+                html: '<img class="my-div-image" src="https://i.imgur.com/OtAyBC9.png"/>'+
+                '<span class="kontakt_location__span">Interijeri Franić</span>'
                 })
             })
             .addTo(map)
             .bindPopup(
                 L.popup({}).setContent(
                 `
-                <div class="kontakt_popup__content">
-                    <h3 class="kontakt_popup__naziv">Salon Mostar</h3>
-                    <p>Sutina bb, Mostar 88000</p>
+                <div class="kontakt_popup__nopicture">
+                    <h3 class="kontakt_popup__naziv">Interijeri Franić</h3>
+                    <p>Solinska ul. 84, 21000, Split, Hrvatska</p>
                     <p>PON - SUB: 08:00 - 20:00</p>
                     <p>NED : neradni dan</p>
-                    <p>+387 36 55 82 95</p>
-                    <p>mostar@kalea.ba</p>
+                    <p>+385 21 58 42 60</p>
                 </div>
-                `+ photoImgSalonFranić
+                `
+                )
+            );
+
+            // Namještaj VEZO Labin
+            var photoImgSalonFranić = '<img class="kontakt_popup__image" src="https://i.ibb.co/MSqBj2J/Kalea-Mostar.jpg" height="120px" width="300px"/>';
+
+            L.marker([45.1159427, 14.1074113], {
+                icon: new L.DivIcon({
+                className: 'my-div-icon',
+                html: '<img class="my-div-image" src="https://i.imgur.com/OtAyBC9.png"/>'+
+                '<span class="kontakt_location__span">Namještaj VEZO Labin</span>'
+                })
+            })
+            .addTo(map)
+            .bindPopup(
+                L.popup({}).setContent(
+                `
+                <div class="kontakt_popup__nopicture">
+                    <h3 class="kontakt_popup__naziv">Namještaj VEZO Labin</h3>
+                    <p>Gorica 201 (Ind. zona Dubrova, 52220, Labin, Hrvatska</p>
+                    <p>PON - SUB: 08:00 - 20:00</p>
+                    <p>NED : neradni dan</p>
+                    <p>+385 91 28 80 644</p>
+                </div>
+                `
+                )
+            );
+
+            
+            // Namještaj VEZO Pula
+            var photoImgSalonFranić = '<img class="kontakt_popup__image" src="https://i.ibb.co/MSqBj2J/Kalea-Mostar.jpg" height="120px" width="300px"/>';
+
+            L.marker([44.8769827, 13.8505123], {
+                icon: new L.DivIcon({
+                className: 'my-div-icon',
+                html: '<img class="my-div-image" src="https://i.imgur.com/OtAyBC9.png"/>'+
+                '<span class="kontakt_location__span">Namještaj VEZO Pula</span>'
+                })
+            })
+            .addTo(map)
+            .bindPopup(
+                L.popup({}).setContent(
+                `
+                <div class="kontakt_popup__nopicture">
+                    <h3 class="kontakt_popup__naziv">Namještaj VEZO Pula</h3>
+                    <p>Monte Giro 5, Put za groblje 5, 52100, Pula, Hrvatska</p>
+                    <p>PON - SUB: 08:00 - 20:00</p>
+                    <p>NED : neradni dan</p>
+                    <p>+385 91 44 43 459</p>
+                </div>
+                `
+                )
+            );
+
+            // Sabolić Interijeri - Si
+            var photoImgSalonFranić = '<img class="kontakt_popup__image" src="https://i.ibb.co/MSqBj2J/Kalea-Mostar.jpg" height="120px" width="300px"/>';
+
+            L.marker([45.8043617, 15.8591887], {
+                icon: new L.DivIcon({
+                className: 'my-div-icon',
+                html: '<img class="my-div-image" src="https://i.imgur.com/OtAyBC9.png"/>'+
+                '<span class="kontakt_location__span">Sabolić Interijeri - Si</span>'
+                })
+            })
+            .addTo(map)
+            .bindPopup(
+                L.popup({}).setContent(
+                `
+                <div class="kontakt_popup__nopicture">
+                    <h3 class="kontakt_popup__naziv">Sabolić Interijeri - Si</h3>
+                    <p>Ul. Velimira Škorpika 11, 10090, Zagreb, Hrvatska</p>
+                    <p>PON - SUB: 08:00 - 20:00</p>
+                    <p>NED : neradni dan</p>
+                    <p>+385 91 23 40 080</p>
+                </div>
+                `
+                )
+            );
+
+            // Intermod
+            var photoImgSalonFranić = '<img class="kontakt_popup__image" src="https://i.ibb.co/MSqBj2J/Kalea-Mostar.jpg" height="120px" width="300px"/>';
+
+            L.marker([44.1015609, 15.2586132], {
+                icon: new L.DivIcon({
+                className: 'my-div-icon',
+                html: '<img class="my-div-image" src="https://i.imgur.com/OtAyBC9.png"/>'+
+                '<span class="kontakt_location__span">Intermod</span>'
+                })
+            })
+            .addTo(map)
+            .bindPopup(
+                L.popup({}).setContent(
+                `
+                <div class="kontakt_popup__nopicture">
+                    <h3 class="kontakt_popup__naziv">Intermod</h3>
+                    <p>Ul. Braće Miroslava i Janka Perice 141, 23000, Zadar, Hrvatska</p>
+                    <p>PON - SUB: 08:00 - 20:00</p>
+                    <p>NED : neradni dan</p>
+                    <p>+385 23 34 29 51</p>
+                </div>
+                `
+                )
+            );
+
+            // Intermod d.o.o.
+            var photoImgSalonFranić = '<img class="kontakt_popup__image" src="https://i.ibb.co/MSqBj2J/Kalea-Mostar.jpg" height="120px" width="300px"/>';
+
+            L.marker([43.5899231, 16.5748897], {
+                icon: new L.DivIcon({
+                className: 'my-div-icon',
+                html: '<img class="my-div-image" src="https://i.imgur.com/OtAyBC9.png"/>'+
+                '<span class="kontakt_location__span">Intermod d.o.o.</span>'
+                })
+            })
+            .addTo(map)
+            .bindPopup(
+                L.popup({}).setContent(
+                `
+                <div class="kontakt_popup__nopicture">
+                    <h3 class="kontakt_popup__naziv">Intermod d.o.o.</h3>
+                    <p>Svetog Leopolda Mandica 1, 21204, Dugopolje, Hrvatska</p>
+                    <p>PON - SUB: 08:00 - 20:00</p>
+                    <p>NED : neradni dan</p>
+                    <p>+385 21 65 62 25</p>
+                </div>
+                `
+                )
+            );
+
+            // Intermod - TC Apfel
+            var photoImgSalonFranić = '<img class="kontakt_popup__image" src="https://i.ibb.co/MSqBj2J/Kalea-Mostar.jpg" height="120px" width="300px"/>';
+
+            L.marker([43.2894229, 17.0290975], {
+                icon: new L.DivIcon({
+                className: 'my-div-icon',
+                html: '<img class="my-div-image" src="https://i.imgur.com/OtAyBC9.png"/>'+
+                '<span class="kontakt_location__span">Intermod - TC Apfel</span>'
+                })
+            })
+            .addTo(map)
+            .bindPopup(
+                L.popup({}).setContent(
+                `
+                <div class="kontakt_popup__nopicture">
+                    <h3 class="kontakt_popup__naziv">Intermod - TC Apfel</h3>
+                    <p>Dubrovačka ul. 35-D8, 21300, Makarska, Hrvatska</p>
+                    <p>PON - SUB: 08:00 - 21:30</p>
+                    <p>NED : neradni dan</p>
+                    <p>+385 21 69 59 60</p>
+                </div>
+                `
+                )
+            );
+
+            // Intermod namještaj
+            var photoImgSalonFranić = '<img class="kontakt_popup__image" src="https://i.ibb.co/MSqBj2J/Kalea-Mostar.jpg" height="120px" width="300px"/>';
+
+            L.marker([42.6528905, 18.085347], {
+                icon: new L.DivIcon({
+                className: 'my-div-icon',
+                html: '<img class="my-div-image" src="https://i.imgur.com/OtAyBC9.png"/>'+
+                '<span class="kontakt_location__span">Intermod namještaj</span>'
+                })
+            })
+            .addTo(map)
+            .bindPopup(
+                L.popup({}).setContent(
+                `
+                <div class="kontakt_popup__nopicture">
+                    <h3 class="kontakt_popup__naziv">Intermod namještaj</h3>
+                    <p>Ul. Nikole Tesle 2, 20000, Dubrovnik, Hrvatska</p>
+                    <p>PON - SUB: 08:00 - 20:00</p>
+                    <p>NED : neradni dan</p>
+                    <p>+385 20 35 81 48</p>
+                </div>
+                `
                 )
             );
 
@@ -267,23 +442,23 @@
     </section>
 
     <!-- INFO AND FORM -->
-    <section id="contactInfoForm" class="bg-kompletnoOpremanjeBackground py-24">
+    <section id="contactInfoForm" class="bg-kompletnoOpremanjeBackground py-14 lg:py-24">
         <div class="container mx-auto">
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid lg:grid-cols-2 gap-4">
                 <!-- INFO SECTION -->
                 <div class="">
-                    <div class="border-l-4 border-white -ml-10">
+                    <div class="border-l-4 border-white -ml-10 text-center lg:text-left">
                         <h2 class="kontakt_title ml-10 text-4xl text-white font-bold mb-16">Za sve dodatne informacije <br>kontaktirajte nas!</h2>
                     </div>
-                    <div class="flex justify-start mb-14">
+                    <div class="flex justify-center lg:justify-start mb-14">
                         <i class="text-white text-2xl font-light fa-solid fa-location-dot mr-5"></i>
                         <span class="text-white text-2xl font-light font-kanit">Bosanski put b.b. 71380 Ilijaš, BIH</span>
                     </div>
-                    <div class="flex justify-start mb-14">
+                    <div class="flex justify-center lg:justify-start mb-14">
                         <i class="text-white text-2xl font-light fa-solid fa-envelope mr-5"></i>
                         <span class="text-white text-2xl font-light font-kanit">kalea@kalea.ba</span>
                     </div>
-                    <div class="flex justify-start mb-24">
+                    <div class="flex justify-center lg:justify-start mb-24">
                         <i class="text-white text-2xl font-light fa-solid fa-phone mr-5"></i>
                         <span class="text-white text-2xl font-light font-kanit">+387 (0)33 40 24 44</span>
                     </div>
@@ -297,7 +472,7 @@
                     
                     ?>
                     <!-- SOCIAL MEDIA -->
-                    <div class="scrol__short flex justify-start">
+                    <div class="scrol__short flex justify-center lg:justify-start mb-10 lg:mb-0">
                         <!-- FACEBOOK -->
                         <a href="<?php echo $socialMediaFacebook; ?>" target="_blank">
                             <i class="text-white text-3xl fa-brands fa-facebook mr-7"></i>

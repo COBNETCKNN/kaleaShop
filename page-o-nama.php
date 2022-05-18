@@ -15,7 +15,7 @@
         
         ?>
         <div class="aboutUs_info">
-            <div class="grid grid-cols-4 gap-4">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- BROJ POSLOVNICA -->
                 <div class="">
                     <img class="aboutUs_svginfo slide_top__aboutUsSvg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/aboutUs/poslovnice.svg'; ?>" alt="">
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <lottie-player class="absolute bottom-24 right-10" src="https://assets5.lottiefiles.com/packages/lf20_bf7dckfo.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop autoplay></lottie-player>
+        <lottie-player class="hidden lg:block absolute bottom-24 right-10" src="https://assets5.lottiefiles.com/packages/lf20_bf7dckfo.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop autoplay></lottie-player>
     </div>
 </section>
 <!-- O NAMA -->
@@ -56,7 +56,7 @@
         </div>
         <!-- CONTENT -->
         <div class="flex justify-center ">
-            <div class="text-2xl text-center font-kanit font-light text-white mt-10 w-4/5"><?php the_content(); ?></div>
+            <div class="text-2xl text-center font-kanit font-light text-white mt-10 lg:w-4/5"><?php the_content(); ?></div>
         </div>
     </div>
 </section>
@@ -64,16 +64,16 @@
 <!-- PRODUCTS -->
 <section id="aboutUs_products" class="bg-grayBackground py-14">
     <div class="container mx-auto">
-        <div class="grid grid-cols-2 gap-24 relative">
+        <div class="grid lg:grid-cols-2 gap-24 relative">
             <!-- TEXT SECTION -->
-            <div class="slide_right">
+            <div class="slide_right text-center lg:text-left">
                 <p class="text-2xl mb-7 font-kanit font-normal text-black">Fbrika namještaja KALEA je odvažno fokusirana na budućnost dizajna i vrhunski kvalitet namještaja za domaće i regionalno tržište.</p>
                 <p class="text-2xl mb-7 font-kanit font-extralight text-black">Potrebe kupaca diktiraju evoluciju stila i uređenja enterijera što je imperativ u industriji namještaja kroz balans posvećenosti kvaliteti, dizajnu i funkcionalnosti.</p>
                 <p class="text-2xl mb-7 font-kanit font-extralight text-black">Oživljavajući princip autentičnosti posebnu pažnju posvećujemo dizajn detaljima, kvalitetu, koloritu, štofu, komforu i funkcionalnosti svakog komada namještaja po mjeri.</p>
                 <p class="text-2xl mb-7 font-kanit font-extralight text-black">Oživite vašu kreativnost i inspiraciju na jednom mjestu, kompletno projektovanje i opremanje doma prepustite KALEA timu.</p>
             </div>
             <!-- IMAGE SECTION -->
-            <div class="slide_left aboutUs_product__chair">
+            <div class="slide_left aboutUs_product__chair hidden lg:block">
                 <img class="" src="<?php echo get_template_directory_uri() . '/assets/images/aboutUs/kalea_stolica.png'; ?>" alt="">
             </div>
         </div>
@@ -82,13 +82,13 @@
         <div class="relative">
             <img class="aboutUs_product__couch slide_right__faster" src="<?php echo get_template_directory_uri() . '/assets/images/aboutUs/kalea_couch.png'; ?>" alt="">
 
-            <div class="grid grid-cols-2 gap-24 relative">
+            <div class="grid lg:grid-cols-2 gap-24 relative">
                 <!-- IMAGE SECTION -->
                 <div class="slide_right__faster">
 
                 </div>
                 <!-- TEXT SECTION -->
-                <div class="slide_left__faster mt-24">
+                <div class="slide_left__faster mt-24 text-center lg:text-left">
                     <p class="text-2xl mb-7 font-kanit font-normal text-black">Stručni KALEA tim će sve vaše ideje i želje opremanja dnevnog boravka, kuhinje, dječije i spavaće sobe, ili možda hotela, kancelarije, apartmana ili restorana pretvoriti u savremeno idejno rješenje za opremanje enterijera.</p>
                     <p class="text-2xl mb-7 font-kanit font-extralight text-black">Vrhunski kvalitet, upečatljiv kolorit, savremen dizajn i autentičan stil garantuju magiju privlačnosti namještaja KALEA i vašeg enterijera.</p>
                 </div>
@@ -99,7 +99,7 @@
 <!-- KONTAKTIRAJTE NAS -->
 <section id="aboutUs_kontaktirajteNas" class="py-24">
     <div class="container mx-auto">
-        <div class="w-4/5 mx-auto">
+        <div class="lg:w-4/5 mx-auto">
             <p class="text-lg font-kanit font-light text-white text-center mb-10">Nesumnjivo prateći savremene trendove fabrika namještaja KALEA nudi platformu zajedničke kreativnosti i stvaranja u vašem domu.
             Spojem dizajnerske stručnosti i vaših ličnih kreacija nastaju umjetnička djela u obliku modernog namještaja za vaš dom.
             Iz udobnosti vašeg doma pozovite naš tim dizajnera i projekt menađera i zajedno ostvarite i najmanje želje opremanja vlastitog doma po mjeri proizvodima vrhunskog kvaliteta i prepoznatljivog dizajna.</p>
@@ -107,7 +107,7 @@
             Kombinujte namještaj, boje i materijale koji oslikavaju vaš individualizam, jer dizajnersko opremanje doma nikad nije bilo jednostavnije.</p>
             <!-- KONTAKTIRAJTE NAS BUTTON -->
             <div class="flex justify-center mt-24">
-                <a href="#">
+                <a href="<?php echo site_url('/kontakt')?>">
                   <button class="bg-transparent font-kanit text-white font-light py-2 px-14 border border-white">Kontaktirajte nas</button>
                 </a>
             </div>

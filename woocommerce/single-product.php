@@ -64,44 +64,49 @@ get_header( 'shop' ); ?>
 
 <section id="singleProduct" class="bg-grayBackground pb-10">
 		<!-- HERO SECTION -->
-		<div class="singleProduct_hero__image relative">
-			<?php 
-				$singleProduct_hero = get_field('naslovna_slika');
-				$size = 'full'; // (thumbnail, medium, large, full or custom size)
-				if( $singleProduct_hero ) {
-					echo wp_get_attachment_image( $singleProduct_hero, $size );
-				}
-			?>
-			<div class="singleProduct_hero__scroll absolute bottom-10 right-10">
-				<img src="<?php echo get_template_directory_uri() . '/assets/images/scroll.png'; ?>" alt="">
+		<section id="singleProduct_hero" class="h-screen w-full">
+			<div class="singleProduct_hero__image relative w-full h-screen -mt-24">
+				<?php 
+					$singleProduct_hero = get_field('naslovna_slika');
+					$size = 'full'; // (thumbnail, medium, large, full or custom size)
+					if( $singleProduct_hero ) {
+						echo wp_get_attachment_image( $singleProduct_hero, $size );
+					}
+				?>
+			<lottie-player class="absolute bottom-24 right-10" src="https://assets5.lottiefiles.com/packages/lf20_bf7dckfo.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop autoplay></lottie-player>
 			</div>
-		</div>
-		<!-- SPLIDE CAROUSEL -->
-		<section id="third" class="splide my-10" aria-labelledby="carousel-heading">
-				<div class="splide__track h-3/6">
-						<ul class="splide__list">
-							
-								<?php 
-									global $product;
-
-									$attachment_ids = $product->get_gallery_image_ids();
-
-									foreach( $attachment_ids as $attachment_id ) {
-										$image_link = wp_get_attachment_url( $attachment_id );
-										echo '<li class="splide__slide">';
-										echo '<img src="'.$image_link.'" alt="" class="splide_image">"';
-										echo '</li>';
-									}
-								?>
-						</ul>
-				</div>
 		</section>
+
+		<!-- SPLIDE CAROUSEL -->
+		<?php 
+		
+		$attachment_ids = $product->get_gallery_image_ids();
+
+		if($attachment_ids) {
+
+		?>
+
+			<section id="singleProduct_slick__first" class="h-auto w-full  mt-14">
+				<div class="singleProduct_slick">
+					<?php 
+						global $product;
+
+						
+
+						foreach( $attachment_ids as $attachment_id ) {
+							$image_link = wp_get_attachment_url( $attachment_id );
+							echo '<img src="'.$image_link.'" alt="" class="singleProduct_slick__image">"';
+						}
+					?>
+				</div>
+			</section>
+		<?php } ?>
 		<!-- CONTENT SECTION -->
 		<section id="singleProduct_mainContent" class="pt-14">
 			<div class="container mx-auto">
-				<div class="grid grid-cols-2 gap-4">
+				<div class="grid lg:grid-cols-2 gap-4">
 					<!-- LEFT SECTION -->
-					<div class="border-r border-black">
+					<div class="lg:border-r border-black">
 						<!-- TITLE AND CATEGORY -->
 						<h1 class="font-lovelace uppercase text-4xl font-normal text-grayText"><?php the_title(); ?></h1>
 						<div class="font-kanit uppercase text-2xl font-normal text-grayText mt-1.5">
@@ -116,7 +121,7 @@ get_header( 'shop' ); ?>
 							?>
 						</div>
 						<!-- OPIS PROIZVODA -->
-						<div class="singleProduct_opisProizvoda mt-16 lg:w-9/12">
+						<div class="singleProduct_opisProizvoda mt-5 lg:mt-16 lg:w-9/12">
 							<h3 class="text-xl uppercase font-lovelace font-normal text-grayText">Opis proizvoda</h3>
 							<p class="text-sm font-kanit font-normal text-grayText mt-1.5 "><?php the_content(); ?></p>
 						</div>
@@ -131,7 +136,7 @@ get_header( 'shop' ); ?>
 						</div>
 					</div>
 					<!-- RIGHT SECTION -->
-					<div class="mt-10 ml-10">
+					<div class="lg:mt-10 lg:ml-10">
 					<?php
 						// Check rows exists.
 						if( have_rows('dodaj_informacije_o_3d_modelima') ):
@@ -144,13 +149,13 @@ get_header( 'shop' ); ?>
 								$cijenaModela = get_sub_field('osnovni');
 								// Do something... ?>
 								<div class="mt-4">
-									<div class="grid grid-cols-4 gap-4">
+									<div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
 										<!-- VRSTA MODELA -->
-										<div class="">
+										<div class="lg:col-span-2 text-center lg:text-left ">
 											<span class="font-kanit text-2xl font-light uppercase text-grayText"><?php echo $vrstaModela; ?></span>
 										</div>
 										<!-- CIJENA MODELA -->
-										<div class="">
+										<div class="text-center lg:text-left ">
 											<span class="font-kanit text-2xl font-bold text-grayText"><?php echo $cijenaModela; ?>&nbsp;KM</span>
 										</div>
 									</div>
@@ -165,33 +170,47 @@ get_header( 'shop' ); ?>
 						endif;
 						?>
 						<div class="singleProduct_buttons">
-							<div class="grid grid-cols-2 gap-4 mt-14">
+							<div class="grid grid-cols-2 lg:grid-cols-3 gap-4 mt-14">
 								<!-- DODAJ U KOŠARICU -->
-								<a href="<?php
-									$add_to_cart = do_shortcode('[add_to_cart_url id="'.$post->ID.'"]');
-									echo $add_to_cart;
-								?>" class="more"><button class="bg-addToCartButton text-addToCartText font-medium py-3 px-4rounded w-3/4 uppercase">Dodaj u košaricu</button></a>
-								<!-- 3D KONFIGURATOR -->
-								<?php 
-								if(get_field('proizvod_ima_3d_konfigurator') == 'DA') { ?>
-
-								<a href="#">
-									<div class="relative">
-									<span class="konfigurator_text textl-lg font-light font-kanit text-grayText">UREDI NAMJEŠTAJ PO SVOM IZBORU</span>
-									<button class="bg-transparent text-white font-bold py-3 px-4 border-2 border-black rounded w-3/4 uppercase">
-										<div class="flex">
-											<img src="<?php echo get_template_directory_uri() . '/assets/images/3dkonfigurator.svg'; ?>" alt="" class="mr-7"><span class="textl-lg font-semibold font-kanit text-grayText">3d konfigurator</span>
-										</div>
-									</button>
-									</div>
-								</a>
+								<?php if($product->get_price_html()) { ?>
+								<div class="col-span-1 mx-auto lg:mx-0">
+									<a href="<?php
+										$add_to_cart = do_shortcode('[add_to_cart_url id="'.$post->ID.'"]');
+										echo $add_to_cart;
+									?>" class="more"><button class="addToCart_button bg-addToCartButton text-addToCartText font-medium py-3 px-4 rounded w-3/4 uppercase">Dodaj u košaricu</button></a>
+								</div>
 								<?php } ?>
+
+								<!-- 3D KONFIGURATOR -->
+								<div class="">
+									<?php 
+									if(get_field('proizvod_ima_3d_konfigurator') == 'DA') { 
+									
+									global $product;
+									$id = $product->get_id();
+
+									$konfiguratorLink = 'https://modeli.kalea.ba/' . $id;
+										
+									?>
+
+									<a href="<?php echo $konfiguratorLink; ?>">
+										<div class="relative">
+										<button class="konfigurator_button bg-transparent text-white font-bold py-2 px-7 border-2 border-black rounded uppercase">
+											<div class="flex">
+												<img src="<?php echo get_template_directory_uri() . '/assets/images/3dkonfigurator.svg'; ?>" alt="" class="mr-2 lg:mr-7"><span class="my-auto konfigurator_span text-sm lg:textl-lg font-semibold font-kanit text-grayText">3d konfigurator</span>
+											</div>
+										</button>
+										</div>
+									</a>
+									<?php } ?>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		<?php if(get_field('galerija_render_slika')){ ?>
 		<!-- GALLERY SECTION -->
 		<section id="third" class="splide2 relative" aria-label="Galerija Render Slika">
 		<div class="splide__track">
@@ -210,32 +229,33 @@ get_header( 'shop' ); ?>
 			</ul>
 		</div>
 		</section>
+		<?php } ?>
 		<!-- YOUTUBE EMBEDED VIDEO -->
 		<!-- <section id="singleProduct_video">
             <div class="embed-container flex justify-center mt-12">
               <?php // the_field('video_'); ?>
             </div>
 		</section> -->
-		<!-- TEHNIČKI PODACI PDF -->
-		<?php $pdfSlike = get_field('tehnicki_podaci_galerija'); ?> 
+		<?php if(get_field('tehnicki_podaci_galerija')) { ?>
+			<!-- TEHNIČKI PODACI PDF -->
+			<?php $pdfSlike = get_field('tehnicki_podaci_galerija'); ?> 
 
-		<?php if($pdfSlike): ?> 
-		<section id="singleProduct_pdfpodaci" class="my-14">
-			<div class="container mx-auto">
-			<div class="grid grid-cols-3 gap-6">
+			<?php if($pdfSlike): ?> 
+			<section id="singleProduct_pdfpodaci" class="my-14">
+				<div class="container mx-auto">
+					<div class="singleProduct_pdf__slider">
+						<?php foreach( $pdfSlike as $pdfSlika ): ?> 
+							
+							<a href="<?php echo $pdfSlika['url']; ?>" target="_blank" class="thumbnail" data-lightbox="image-1"> 
+								<img class="singleProduct_pdfSlika" src="<?php echo $pdfSlika['sizes']['large']; ?>" alt="<?php the_title(); ?>" width="350" height="300"/> 
+							</a> 
 
-			<?php foreach( $pdfSlike as $pdfSlika ): ?> 
-				
-				<a href="<?php echo $pdfSlika['url']; ?>" target="_blank" class="thumbnail" data-lightbox="image-1"> 
-					<img class="singleProduct_pdfSlika" src="<?php echo $pdfSlika['sizes']['large']; ?>" alt="<?php the_title(); ?>" width="350" height="300"/> 
-				</a> 
-
-			<?php endforeach; ?> 
-
+						<?php endforeach; ?> 
+					</div>
 				</div>
-			</div>
-		</section>
-		<?php endif; ?>
+			</section>
+			<?php endif; ?>
+		<?php } ?>
 </section>
 
 <?php

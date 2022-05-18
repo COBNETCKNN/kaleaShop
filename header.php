@@ -55,7 +55,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
 					</div>
 					<!-- KONFIGURATOR BUTTON -->
 					<div class="ml-5 my-auto">
-						<a href="#">
+						<a href="<?php echo site_url('/konfigurator')?>">
 							<button class="text-white font-medium font-kanit text-lg uppercase bg-konfiguratorRed px-4 py-1">Konfigurator
 							</button>
 						</a>
@@ -67,7 +67,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
 							<img class="header_profileIcon" src="<?php echo get_template_directory_uri() . '/assets/images/Vector.png'; ?>" alt="">
 						</a>
 						<!-- CART INCON -->
-						<a href="#" class="ml-5 my-auto">
+						<a href="<?php echo site_url('/cart')?>" class="ml-5 my-auto">
 							<img class="header_cartIcon" src="<?php echo get_template_directory_uri() . '/assets/images/Group.png'; ?>" alt="">
 						</a>
 						<!-- DROPDOWN ICON -->
@@ -114,10 +114,10 @@ $tagline   = get_bloginfo( 'description', 'display' );
             </div>
         </div>
         <!-- DROPDOWN CONTAINER -->
-        <div class="hidden navbar_grid__dropdown grid grid-cols-5 w-full h-screen absolute top-0 right-0 z-10 bg-transparent flex justify-between" id="navigation">
+        <div class="hidden navbar_grid__dropdown w-full h-auto absolute top-0 right-0 z-10 bg-black flex justify-between" id="navigation">
 
             <!-- DROPDOWN MENU -->
-            <div class="header_dropdown bg-black flex justify-center w-full absolute py-10">
+            <div class="header_dropdown bg-black flex justify-center w-full h-auto py-10">
                 <div class="">
                     <!-- CLOSE BUTTON -->
                     <button class="nav_close__button nav-toggler close_button text-white text-4xl p-3 absolute top-2 right-2" data-target="#navigation">&#215;</button>
@@ -134,7 +134,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
 					<!-- KONFIGURATOR BUTTON -->
 					<div class="">
-						<a href="#">
+						<a href="<?php echo site_url('/konfigurator')?>">
 							<button class="text-white font-medium font-kanit text-lg uppercase bg-konfiguratorRed px-4 py-1">Konfigurator / Shop
 							</button>
 						</a>
@@ -146,7 +146,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
 							<img src="<?php echo get_template_directory_uri() . '/assets/images/Vector.png'; ?>" alt="">
 						</a>
 						<!-- CART INCON -->
-						<a href="#" class="ml-5">
+						<a href="<?php echo site_url('/cart')?>" class="ml-5">
 							<img src="<?php echo get_template_directory_uri() . '/assets/images/Group.png'; ?>" alt="">
 						</a>
 					</div>
@@ -202,7 +202,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                 <div class="grid grid-cols-7 gap-4">
                     <!-- SJEDEĆE GARNITURE -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/sjedece-garniture/')?>">
                             <div class="mx-auto my-auto">
                               <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/sjedeće garniture 1.svg'; ?>" alt="">
                             </div>
@@ -211,7 +211,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- KUHINJE -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/kuhinje/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/kuhinje.svg'; ?>" alt="">
                             </div>
@@ -220,7 +220,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- SPAVAĆE SOBE -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/spavace-sobe/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/spavaće sobe.svg'; ?>" alt="">
                             </div>
@@ -229,7 +229,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- TERPEZARIJSKI STOLOVI -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/trpezarijski-stolovi/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/terpezarijski stolovi.svg'; ?>" alt="">
                             </div>
@@ -238,7 +238,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- TERPEZARIJSKE STOLICE -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/trpezarijske-stolice/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/terpezarijske stolice.svg'; ?>" alt="">
                             </div>
@@ -247,7 +247,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- FOTELJE -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/fotelje/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/fotelje.svg'; ?>" alt="">                      
                             </div>
@@ -256,7 +256,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- KOMODE -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/komode/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/komode.svg'; ?>" alt="">
                             </div>
@@ -274,7 +274,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                 <div class="grid grid-cols-7 gap-4">
                     <!-- PLAKARI -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/plakari/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/plakari.svg'; ?>" alt="">
                             </div>
@@ -283,7 +283,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- KLUB STOLOVI -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/klub-stolovi/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/klub stolovi.svg'; ?>" alt="">
                             </div>
@@ -292,7 +292,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- DJEČIJE SOBE -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/djecije-sobe/')?>">
                             <div class="mx-auto my-auto">
                               <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/dječije sobe.svg'; ?>" alt="">
                             </div>
@@ -301,7 +301,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- PREDSOBLJA -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/predsoblja/')?>">
                             <div class="mx-auto my-auto">
                                <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/predsoblja.svg'; ?>" alt="">
                             </div>
@@ -310,7 +310,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- SISTEMI ZA DNEVNI BORAVAK -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/sistem-za-dnevni-boravak/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/sistemi za dnevni boravak.svg'; ?>" alt="">
                             </div>
@@ -319,7 +319,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- KANCELARIJSKI NAMJEŠTAJ -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/kancelarijski-namjestaj/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/kancelarijski namještaj.svg'; ?>" alt="">
                             </div>
@@ -328,7 +328,7 @@ $tagline   = get_bloginfo( 'description', 'display' );
                     </div>
                     <!-- PRATEĆE DEKORACIJE -->
                     <div class="">
-                        <a href="#">
+                        <a href="<?php echo site_url('/product-category/dekoracije/')?>">
                             <div class="mx-auto my-auto">
                                 <img class="header_dropdown__svg mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headerDropdown/terpezarijski stolovi.svg'; ?>" alt="">
                             </div>

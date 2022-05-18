@@ -1,132 +1,64 @@
-<?php
-/**
- * The Template for displaying product archives, including the main shop page which is a post type archive
- *
- * This template can be overridden by copying it to yourtheme/woocommerce/archive-product.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates
- * @version 3.4.0
- */
+<?php get_header(); ?>
 
-defined( 'ABSPATH' ) || exit;
+<?php do_action( 'woocommerce_before_main_content' ); ?>
 
-get_header( 'shop' );
-
-/**
- * Hook: woocommerce_before_main_content.
- *
- * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
- * @hooked woocommerce_breadcrumb - 20
- * @hooked WC_Structured_Data::generate_website_data() - 30
- */
-do_action( 'woocommerce_before_main_content' );
-
-?>
-<header class="woocommerce-products-header">
-	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-	<?php endif; ?>
-
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action( 'woocommerce_archive_description' );
-	?>
-</header>
-<?php
-
-
-
-?>
-
-<section id="products" class="my-10">
-	<div class="container mx-auto">
-		
-		<!-- SEARCH BAR -->
-		<?php /* ?>
-		<div class="products_searchbar my-16">
-			<?php get_product_search_form(); ?>
-		</div> 
-		<?php */?>
-		<div class="grid grid-cols-5 gap-4">
-			<!-- CATEGORIES COLUMN -->
-			<div class="products_categories col-span-1">
+<section id="konfigurator" class="bg-cartBackground pt-36 lg:pt-48 pb-24 -mt-24">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-5 gap-4">
+            <!-- CATEGORIES COLUMN -->
+			<div class="products_categories col-span-2 lg:col-span-1">
 				<div class="product_categories_kategorije mb-10">
-					<h2 class="font-kanit text-2xl font-light uppercase">Kategorije</h2>
+					<h2 class="font-kanit text-xl lg:text-2xl font-light uppercase">Kategorije</h2>
 				</div>
-				<div class="font-kanit font-normal text-base konfigurator_categories">
-					<?php echo do_shortcode('[product_categories class="product_categories"]'); ?>
+				<div class="konfigurator_categories font-kanit font-normal text-base">
+                    <?php wp_list_categories( array('taxonomy' => 'product_cat', 'title_li'  => '') ); ?>
+
 				</div>
 			</div>
-			<!-- PRODUCTS COLUMN -->
-			<div class="products_products col-span-4 mt-10">
-				<?php 
-					if ( woocommerce_product_loop() ) {
+            <!-- PRODUCTS -->
+            <div class="col-span-3 lg:col-span-4 mx-auto lg:mx-0">
+                <div class="konfigurator_grid grid lg:grid-cols-4 gap-4">
+                    <?php
 
-					/**
-					 * Hook: woocommerce_before_shop_loop.
-					 *
-					 * @hooked woocommerce_output_all_notices - 10
-					 * @hooked woocommerce_result_count - 20
-					 * @hooked woocommerce_catalog_ordering - 30
-					 */
-					do_action( 'woocommerce_before_shop_loop' );
+                    $ourCurrentPpageKonfigurator = get_query_var('paged');
 
-					woocommerce_product_loop_start();
+                    $args = array(
+                        'post_type'   => 'product',
+                        'post_status' => 'publish',
+                        'posts_per_page' => 8,
+                        'paged' => $ourCurrentPpageKonfigurator,
+                        );
+                    $the_query = new WP_Query( $args );
+                    if ( $the_query->have_posts() ) {
+                        while ( $the_query->have_posts() ) : $the_query->the_post();
 
-					if ( wc_get_loop_prop( 'total' ) ) {
-						while ( have_posts() ) {
-							the_post();
+                            // Get default product template
+                            wc_get_template_part( 'content', 'product' );
 
-							/**
-							 * Hook: woocommerce_shop_loop.
-							 */
+                        endwhile;
+                    } else {
+                        echo __( 'No products found' );
+                    }
 
-							do_action( 'woocommerce_shop_loop' );
+                    
+                    wp_reset_postdata();
+                    ?>
 
-							wc_get_template_part( 'content', 'product' );
-						}
-					}
-
-					woocommerce_product_loop_end();
-
-					/**
-					 * Hook: woocommerce_after_shop_loop.
-					 *
-					 * @hooked woocommerce_pagination - 10
-					 */
-					do_action( 'woocommerce_after_shop_loop' );
-				} else {
-					/**
-					 * Hook: woocommerce_no_products_found.
-					 *
-					 * @hooked wc_no_products_found - 10
-					 */
-					do_action( 'woocommerce_no_products_found' );
-				}
-
-				/**
-				 * Hook: woocommerce_after_main_content.
-				 *
-				 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-				 */
-				do_action( 'woocommerce_after_main_content' );
-				?>
-			</div>
-		</div>
-	</div>
+                </div>
+                <div class="projekti_pagination nav-links flex justify-center mt-10">
+					  <?php 
+					 	echo paginate_links(array(
+							'total' => $the_query->max_num_pages,	
+							'prev_text' => '<i class="fa-solid fa-arrow-left"></i>',
+							'next_text' => '<i class="fa-solid fa-arrow-right"></i>'	
+						 )) 
+					  ?>
+				</div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<?php do_action( 'woocommerce_after_main_content' ); ?>
 
-<?php get_footer( 'shop' ); ?>
+<?php get_footer(); ?>
